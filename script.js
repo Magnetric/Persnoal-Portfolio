@@ -164,7 +164,6 @@ function initializeSectionObserver() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const currentSectionId = entry.target.id;
-                console.log('Section detected:', currentSectionId, 'Intersection ratio:', entry.intersectionRatio);
                 updateMobileNavActive(currentSectionId);
             }
         });
@@ -176,7 +175,6 @@ function initializeSectionObserver() {
     // Observe all sections
     sections.forEach(section => {
         sectionObserver.observe(section);
-        console.log('Observing section:', section.id);
     });
     
     // Function to update mobile navigation active state
