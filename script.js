@@ -2,9 +2,38 @@
 const hamburger = document.querySelector('.hamburger');
 const mobileNav = document.querySelector('.mobile-nav');
 
+// Create overlay if it doesn't exist
+let mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+if (!mobileNavOverlay) {
+    mobileNavOverlay = document.createElement('div');
+    mobileNavOverlay.className = 'mobile-nav-overlay';
+    document.body.appendChild(mobileNavOverlay);
+}
+
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     mobileNav.classList.toggle('active');
+    mobileNavOverlay.classList.toggle('active');
+});
+
+// Close mobile menu when clicking overlay
+mobileNavOverlay.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileNav.classList.remove('active');
+    mobileNavOverlay.classList.remove('active');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    // Check if mobile nav is active
+    if (mobileNav.classList.contains('active')) {
+        // Check if click is outside mobile nav and not on hamburger
+        if (!mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+            hamburger.classList.remove('active');
+            mobileNav.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+        }
+    }
 });
 
 // Close mobile menu when clicking on a link
@@ -12,6 +41,9 @@ document.querySelectorAll('.mobile-nav a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         mobileNav.classList.remove('active');
+        if (mobileNavOverlay) {
+            mobileNavOverlay.classList.remove('active');
+        }
     });
 });
 
@@ -21,6 +53,9 @@ if (mobileNavClose) {
     mobileNavClose.addEventListener('click', () => {
         hamburger.classList.remove('active');
         mobileNav.classList.remove('active');
+        if (mobileNavOverlay) {
+            mobileNavOverlay.classList.remove('active');
+        }
     });
 }
 
@@ -114,9 +149,105 @@ window.addEventListener('load', () => {
     
     // Update age display
     updateAge();
+    
+    // Initialize section observer for mobile navigation
+    initializeSectionObserver();
 });
 
-// Removed parallax effect for hero section
+// Section observer for mobile navigation highlighting
+function initializeSectionObserver() {
+    const sections = document.querySelectorAll('section[id]');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+    
+    // Create intersection observer
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const currentSectionId = entry.target.id;
+                console.log('Section detected:', currentSectionId, 'Intersection ratio:', entry.intersectionRatio);
+                updateMobileNavActive(currentSectionId);
+            }
+        });
+    }, {
+        threshold: 0.1, // Trigger when 10% of section is visible
+        rootMargin: '-10% 0px -10% 0px' // Less aggressive margin
+    });
+    
+    // Observe all sections
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+        console.log('Observing section:', section.id);
+    });
+    
+    // Function to update mobile navigation active state
+    function updateMobileNavActive(sectionId) {
+        // Remove active class from all mobile nav links
+        mobileNavLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        
+        // Add active class to corresponding link
+        const activeLink = document.querySelector(`.mobile-nav a[href="#${sectionId}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    }
+    
+    // Update active state when mobile nav is opened
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    
+    hamburger.addEventListener('click', () => {
+        // Small delay to ensure nav is visible before updating
+        setTimeout(() => {
+            const currentSection = getCurrentVisibleSection();
+            if (currentSection) {
+                updateMobileNavActive(currentSection);
+            }
+        }, 100);
+    });
+    
+    // Handle mobile nav link clicks for active state
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Remove active class from all links
+            mobileNavLinks.forEach(l => l.classList.remove('active'));
+            // Add active class to clicked link
+            link.classList.add('active');
+        });
+    });
+    
+    // Function to get currently visible section
+    function getCurrentVisibleSection() {
+        const sections = document.querySelectorAll('section[id]');
+        const windowHeight = window.innerHeight;
+        const scrollTop = window.pageYOffset;
+        
+        let bestMatch = 'home';
+        let bestScore = 0;
+        
+        for (let section of sections) {
+            const rect = section.getBoundingClientRect();
+            const sectionTop = rect.top;
+            const sectionBottom = rect.bottom;
+            
+            // Calculate how much of the section is visible
+            const visibleTop = Math.max(0, Math.min(windowHeight, sectionBottom) - Math.max(0, sectionTop));
+            const visibleHeight = Math.min(sectionBottom, windowHeight) - Math.max(sectionTop, 0);
+            const visibilityScore = visibleHeight / windowHeight;
+            
+            // Check if section is significantly visible (more than 20%)
+            if (visibilityScore > 0.2 && sectionTop < windowHeight * 0.8) {
+                if (visibilityScore > bestScore) {
+                    bestScore = visibilityScore;
+                    bestMatch = section.id;
+                }
+            }
+        }
+        
+        return bestMatch;
+    }
+}
 
 // Add fade-in animation for project cards
 const projectObserver = new IntersectionObserver((entries) => {
