@@ -102,30 +102,10 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Add typing effect to hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
+// Removed typing effect function
 
-// Initialize typing effect when page loads
+// Initialize page when loads
 window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        typeWriter(heroTitle, originalText, 150);
-    }
-    
     // Initialize navigation active state
     const navLinks = document.querySelectorAll('.nav-menu a');
     if (navLinks.length > 0) {
@@ -136,15 +116,7 @@ window.addEventListener('load', () => {
     updateAge();
 });
 
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const rate = scrolled * -0.5;
-        hero.style.transform = `translateY(${rate}px)`;
-    }
-});
+// Removed parallax effect for hero section
 
 // Add fade-in animation for project cards
 const projectObserver = new IntersectionObserver((entries) => {
