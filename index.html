@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Hao Xu - Data Scientist/Engineer | IT Professional | Supply Chain Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>HX</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#interest">Interest</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hao Xu</h1>
+                <h2 class="hero-subtitle">Data Scientist/Engineer | IT Professional | Supply Chain Analytics</h2>
+                <p class="hero-description">
+                    <strong><u>Data Scientist/Engineer</u></strong> with <strong><u>4+ years</u></strong> of experience in analytics, business intelligence, and IT solutions. 
+                    Skilled in transforming complex data into actionable insights across industries including supply chain, 
+                    logistics, and port operations. Expertise in <strong><u>statistical analysis</u></strong>, <strong><u>data pipelines</u></strong>, <strong><u>modeling</u></strong>, 
+                    <strong><u>machine learning</u></strong>, and <strong><u>visualization</u></strong>. <span class="description-break"></span>Combining technical proficiency with business acumen, I design scalable 
+                    solutions that enhance decision-making and deliver measurable impact.
+                </p>
+                <div class="hero-info">
+                    <div class="info-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span id="age-display">1998 • <span id="current-age">27</span> years old</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <span>Male</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Master's Degree</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>4+ years experience</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Gothenburg, Sweden</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-language"></i>
+                        <span>Chinese (Native) • English (Fluent)</span>
+                    </div>
+                </div>
+                <div class="hero-contact">
+                    <div class="contact-item">
+                        <a href="mailto:xuhao.cth@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <div>
+                            <h3><a href="mailto:xuhao.cth@gmail.com" class="contact-text-link">Email</a></h3>
+                            <p>xuhao.cth@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.linkedin.com/in/hao-xu-b277231b8/" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <div>
+                            <h3><a href="https://www.linkedin.com/in/hao-xu-b277231b8/" target="_blank" class="contact-text-link">LinkedIn</a></h3>
+                            <p>https://www.linkedin.com/in/hao-xu-b277231b8/</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <a href="#" class="contact-link phone-copy" data-phone="(+46) 0724430299">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <div>
+                            <h3><a href="#" class="contact-text-link phone-copy" data-phone="(+46) 0724430299">Phone</a></h3>
+                            <p>(+46) 0724430299</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <a href="#" class="contact-link wechat-copy" data-wechat="Magnetrician">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <div>
+                            <h3><a href="#" class="contact-text-link wechat-copy" data-wechat="Magnetrician">WeChat</a></h3>
+                            <p>Magnetrician</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-image">
+                <img src="profilePhoto.jpg" alt="Your Name">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container-skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-category="1">
+                    <div class="category-header">
+                        <h3>Data Analytics & Data Science</h3>
+                        <button class="sort-btn" onclick="sortSkills(1)">
+                            <i class="fas fa-sort-amount-down"></i>
+                        </button>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>A/B Testing</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Machine Learning</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Semantic Modeling</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>R</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category" data-category="2">
+                    <div class="category-header">
+                        <h3>Data Engineering & Development</h3>
+                        <button class="sort-btn" onclick="sortSkills(2)">
+                            <i class="fas fa-sort-amount-down"></i>
+                        </button>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>AWS Cloud</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 86%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Git Version Control</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Data Pipeline</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Database Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Full-Stack Web Development</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Distributed Computing (Hadoop & Spark)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Shell Scripting (PowerShell, Bash)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category" data-category="3">
+                    <div class="category-header">
+                        <h3>Visualization & BI</h3>
+                        <button class="sort-btn" onclick="sortSkills(3)">
+                            <i class="fas fa-sort-amount-down"></i>
+                        </button>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>Power BI (M & DAX) | Tableau | Looker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Tableau</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Google Looker Studio | BigQuery</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Excel/Google Sheets</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container-timeline">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Scientist</h3>
+                        <h4>Stena Line</h4>
+                        <p class="timeline-date">2022.08 - 2025.07</p>
+                        <p class="timeline-description">Primarily focus on end-to-end business data analysis — from data extraction 
+                            and processing to visualization and reporting — to optimize operational processes and enhance decision-making. Some projects such as:</p>
+                        <ul>
+                            <li>Improved estimated ready-for-pickup times for freight using historical data analysis.</li>
+                            <li>Developed Power BI dashboards to visualize, monitor and track operations at Ports and Terminals, which have been in continuous use for over two years.</li>
+                            <li>Applied Causal Impact Analysis to evaluate and confirm the benefits of a pricing model.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Research Assistant (Data Analyst)</h3>
+                        <h4>Chalmers University of Technology</h4>
+                        <p class="timeline-date">2021.04 - 2022.06</p>
+                        <p class="timeline-description">Primarily focused on analyzing changes in delivery patterns and customer behavior during COVID-19, providing actionable insights 
+                            for logistics and retail. Worked on end-to-end research projects — from data collection and modeling to visualization and reporting.</p>
+                        <ul>
+                            <li>Investigated changes in delivery patterns and customer behavior during COVID-19.</li>
+                            <li>Conducted data collection, modeling, analysis, and visualization (in Python and Tableau).</li>
+                            <li>Confirmed post-pandemic shifts in spending and online shopping trends.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Supply Chain Planner (Intern)</h3>
+                        <h4>Midea Property Group</h4>
+                        <p class="timeline-date">2019.06 - 2019.11</p>
+                        <p class="timeline-description">Primarily engaged in supply chain planning and operations support, with a focus on demand forecasting, inventory analysis, 
+                            and logistics coordination. Assisted in end-to-end planning workflows to improve supply chain efficiency.</p>
+                        <ul>
+                            <li>Provided technical support for 200+ users across multiple locations</li>
+                            <li>Managed network infrastructure and security protocols</li>
+                            <li>Implemented new software solutions and user training programs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container-education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h2>Master of Science</h2>
+                        <h3>Supply Chain Management</h3>
+                        <p class="education-university">Chalmers University of Technology</p>
+                        <p class="education-date">2020.09 - 2022.08</p>
+                        <p class="education-location">Gothenburg, Sweden</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h2>Erasmus Exchange</h2>
+                        <h3>Operations Management and Logistics</h3>
+                        <p class="education-university">Eindhoven University of Technology</p>
+                        <p class="education-date">2021.09 - 2022.02</p>
+                        <p class="education-location">Eindhoven, Netherlands</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h2>Bachelor of Engineering</h2>
+                        <h3>Industrial Engineering</h3>
+                        <p class="education-university">South China University of Technology</p>
+                        <p class="education-date">2016.09 - 2020.07</p>
+                        <p class="education-location">Guangzhou, China</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container-projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Track & Trace Dashboard</h3>
+                        <div class="project-meta">
+                            <span class="project-company">Stena Line, Sweden</span>
+                            <span class="project-date">2023.03 - 2023.10</span>
+                        </div>
+                        <p>Under the demand of manager, I independently designed and developed a Power BI dashboard to 
+                            monitor port operations and efficiency at multiple granularities (daily, weekly, monthly). Led the full development cycle, 
+                            including <strong><u>data extraction via SQL</u></strong>, <strong><u>data cleaning with Python/Power Query</u></strong>, and <strong><u>data modeling/visualization 
+                            in Power BI</u></strong>. Engaged stakeholders to refine requirements and iteratively improved the solution based on feedback. 
+                            Deployed the dashboard to production, creating the first centralized tool for port performance monitoring.<br> <br>
+                            The dashboard has been actively used for <strong><u></u>over 1.5 years</u></strong>, delivering significant value by enhancing operational 
+                            visibility and decision-making.</p>
+                        <div class="project-gallery">
+                            <div class="gallery-container">
+                                <img src="images/Project1.1.jpg" alt="Dashboard Screenshot 1" class="gallery-thumbnail" data-project="0" data-image="0">
+                                <img src="images/Project1.2.jpg" alt="Dashboard Screenshot 2" class="gallery-thumbnail" data-project="0" data-image="1">
+                                <img src="images/Project1.3.jpg" alt="Dashboard Screenshot 3" class="gallery-thumbnail" data-project="0" data-image="2">
+                                <img src="images/Project1.4.jpg" alt="Dashboard Screenshot 4" class="gallery-thumbnail" data-project="0" data-image="3">
+                                <img src="images/Project1.5.jpg" alt="Dashboard Screenshot 5" class="gallery-thumbnail" data-project="0" data-image="4">
+                            </div>
+                            <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav gallery-next" onclick="scrollGallery(this, 'next')">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Power BI</span>
+                            <span>SQL</span>
+                            <span>Data & Semantic Modeling</span>
+                            <span>Data Pipeline</span>
+                            <span>Data Visualization</span>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Master Thesis – Supply Chain & Logistics</h3>
+                        <div class="project-meta">
+                            <span class="project-company">Chalmers University, Sweden</span>
+                            <span class="project-date">2022.01 - 2022.08</span>
+                        </div>
+                        <p>Assessing the Economic and Environmental Effects of Dry Port and Triangulation Transport on the 
+                            Empty Container Repositioning Problem</p>
+                        <ul>
+                            <li>Conducted research on empty container repositioning (ECR) in Sweden’s inland container logistics, 
+                                focusing on economic and environmental impacts of dry ports and triangulation transport.
+                            </li>
+                            <li>Built three <strong><u>Agent-based Discrete-event Simulation Models</u></strong> using AnyLogic with real operational data: 
+                                (1) with dry port, (2) without dry port, (3) with dry port plus triangulation. Simulated container flows, 
+                                costs, and CO₂ emissions to evaluate efficiency and sustainability.
+                            </li>
+                            <li>Results showed dry ports reduced transport costs by <strong><u>66.36%</u></strong> and emissions by <strong><u>78.86%</u></strong>; 
+                                triangulation further decreased costs by <strong><u>25.12%</u></strong> and emissions by <strong><u>7.85%</u></strong>.
+                            </li>
+                        </ul>
+                        <div class="project-gallery">
+                            <div class="gallery-container">
+                                <img src="images/Project 3.1.jpg" alt="Thesis Research 1" class="gallery-thumbnail" data-project="1" data-image="0">
+                                <img src="images/Project 3.2.jpg" alt="Thesis Research 2" class="gallery-thumbnail" data-project="1" data-image="1">
+                                <img src="images/Project 3.3.jpg" alt="Thesis Research 3" class="gallery-thumbnail" data-project="1" data-image="2">
+                                <img src="images/Project 3.4.jpg" alt="Thesis Research 4" class="gallery-thumbnail" data-project="1" data-image="3">
+                                <img src="images/Project 3.5.jpg" alt="Thesis Research 5" class="gallery-thumbnail" data-project="1" data-image="4">
+                            </div>
+                            <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav gallery-next" onclick="scrollGallery(this, 'next')">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Java</span>
+                            <span>Logistcs Network Modeling</span>
+                            <span>Agent-based Discrete-event Simulation (AnyLogic)</span>
+                            <span>Academic Research & Writing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Full-Stack Serverless Photography Portfolio Website</h3>
+                        <div class="project-meta">
+                            <span class="project-company">Personal Project — <a href="https://www.haoexplore.com" target="_blank" class="project-link">www.haoexplore.com</a></span>
+                            <span class="project-date">2025.07 - 2025.08</span>
+                        </div>
+                        <p>Independently built a <strong><u></u>AWS-cloud-powered photography website</u></strong> from scratch, combining personal passion with full-stack development 
+                            practice to showcase both creative work and technical skills.</p>
+                            <ul>
+                                <li>Frontend: Designed and deployed a fully responsive website using <strong><u>HTML5</u></strong>, <strong><u>CSS3</u></strong>, and <strong><u>JavaScript</u></strong>, 
+                                    featuring interactive galleries, animations, map integration, and 360° panoramic view.
+                                </li>
+                                <li>Backend: Built a serverless architecture on AWS including <strong><u>API Gateway (REST APIs)</u></strong>, <strong><u>AWS Lambda (Python)</u></strong>, 
+                                    S3 (storage), DynamoDB (NoSQL DB), and SES (automated emails).
+                                </li>
+                                <li>Implemented photo processing pipeline with automatic compression, WebP conversion, and thumbnail generation to optimize performance and user experience.
+                                </li>
+                            </ul>    
+                        <div class="project-gallery">
+                            <div class="gallery-container">
+                                <img src="images/Project 2.1.png" alt="Website Screenshot 1" class="gallery-thumbnail" data-project="2" data-image="0">
+                                <img src="images/Project 2.2.png" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="2" data-image="1">
+                                <img src="images/Project 2.3.png" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="2" data-image="2">
+                                <img src="images/Project 2.5.png" alt="Website Screenshot 4" class="gallery-thumbnail" data-project="2" data-image="3">
+                                <img src="images/Project 2.6.png" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="4">
+                                <img src="images/Project 2.7.png" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="2" data-image="5">
+                                <img src="images/Project 2.8.jpg" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="2" data-image="6">
+                                <img src="images/Project 2.9.jpg" alt="Website Screenshot 4" class="gallery-thumbnail" data-project="2" data-image="7">
+                                <img src="images/Project 2.10.jpg" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="8">
+                                <img src="images/Project 2.11.jpg" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="9">
+                            </div>
+                            <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav gallery-next" onclick="scrollGallery(this, 'next')">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="project-tech">
+                            <span>Full-Stack Web Development</span>
+                            <span>End-to-End Development</span>
+                            <span>AWS Cloud (API Gateway, Lambda, S3, DynamoDB, SES)</span>
+                            <span>UI/UX Design</span>
+                            <span>Serverless Architecture</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interest Section -->
+    <section id="interest" class="interest">
+        <div class="container-interest">
+            <h2 class="section-title">Interests & Hobbies</h2>
+            <div class="interest-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="interest-content">
+                        <h3>Traveling</h3>
+                        <p>The essence of my love for traveling lies in a deep curiosity and passion for the world. Experiencing diverse natural landscapes, 
+                            learning about different lifestyles and local cultures makes me feel that the world is truly wonderful, authentic, and full of life.</p>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="interest-content">
+                        <h3>Photography</h3>
+                        <p>I believe everything eventually fades away — nothing can truly be kept except memories. Memories are the only things that are real and uniquely ours. 
+                            That’s why I love using my lens to capture the beauty of the world, making those memories clearer and longer-lasting.</p>
+                    </div>
+                        <a href="https://www.haoexplore.com" target="_blank" class="interest-link">www.haoexplore.com</a>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                    <div class="interest-content">
+                        <h3>Hiking & Nature</h3>
+                        <p>I am someone who deeply loves nature. In modern cities, where we live surrounded by concrete and steel, hiking and camping 
+                            offer the best and most accessible way to reconnect with the natural world.</p>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="interest-content">
+                        <h3>Reading & Learning</h3>
+                        <p>Reading and learning share the same essence as traveling: both are explorations of the world driven by curiosity.
+                            To me, the true sign of aging is not years, but losing the ability to learn new knowledge, embrace new ideas, and refresh one’s perspectives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="lightbox-nav lightbox-prev">&lt;</button>
+            <button class="lightbox-nav lightbox-next">&gt;</button>
+            <img id="lightbox-image" class="lightbox-image" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Hao Xu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
