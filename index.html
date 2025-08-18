@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="assets/images/icons/favicon.png" type="image/png">
     <title>Hao Xu - Data Scientist/Engineer | IT Professional | Supply Chain Analytics</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -17,13 +17,20 @@
                 <h2>HX</h2>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#interest">Interest</a></li>
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#education" data-i18n="nav.education">Education</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#interest" data-i18n="nav.interest">Interest</a></li>
             </ul>
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="en" data-i18n="lang.en">EN</button>
+                <button class="lang-btn" data-lang="sv" data-i18n="lang.sv">SV</button>
+                <button class="lang-btn" data-lang="nl" data-i18n="lang.nl">NL</button>
+                <button class="lang-btn" data-lang="de" data-i18n="lang.de">DE</button>
+                <button class="lang-btn" data-lang="zh" data-i18n="lang.zh">中文</button>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -38,22 +45,29 @@
             <i class="fas fa-times"></i>
         </button>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#interest">Interest</a></li>
+            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+            <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#education" data-i18n="nav.education">Education</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#interest" data-i18n="nav.interest">Interest</a></li>
         </ul>
+        <div class="mobile-language-switcher">
+            <button class="lang-btn" data-lang="en" data-i18n="lang.en">EN</button>
+            <button class="lang-btn" data-lang="sv" data-i18n="lang.sv">SV</button>
+            <button class="lang-btn" data-lang="nl" data-i18n="lang.nl">NL</button>
+            <button class="lang-btn" data-lang="de" data-i18n="lang.de">DE</button>
+            <button class="lang-btn" data-lang="zh" data-i18n="lang.zh">中文</button>
+        </div>
     </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Hao Xu</h1>
-                <h2 class="hero-subtitle">Data Scientist/Engineer | IT Professional | Supply Chain Analytics</h2>
-                <p class="hero-description">
+                <h1 class="hero-title" data-i18n="hero.name">Hao Xu</h1>
+                <h2 class="hero-subtitle" data-i18n="hero.subtitle">Data Scientist/Engineer | IT Professional | Supply Chain Analytics</h2>
+                <p class="hero-description" data-i18n="hero.description">
                     <strong><u>Data Scientist/Engineer</u></strong> with <strong><u>4+ years</u></strong> of experience in analytics, business intelligence, and IT solutions. 
                     Skilled in transforming complex data into actionable insights across industries including supply chain, 
                     logistics, and port operations. Expertise in <strong><u>statistical analysis</u></strong>, <strong><u>data pipelines</u></strong>, <strong><u>modeling</u></strong>, 
@@ -63,27 +77,27 @@
                 <div class="hero-info">
                     <div class="info-item">
                         <i class="fas fa-birthday-cake"></i>
-                        <span id="age-display">1998 • <span id="current-age">27</span> years old</span>
+                        <span id="age-display" data-i18n="hero.info.age">1998 • <span id="current-age">27</span> years old</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-user"></i>
-                        <span>Male</span>
+                        <span data-i18n="hero.info.gender">Male</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-graduation-cap"></i>
-                        <span>Master's Degree</span>
+                        <span data-i18n="hero.info.degree">Master's Degree</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-briefcase"></i>
-                        <span>4+ years experience</span>
+                        <span data-i18n="hero.info.experience">4+ years experience</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Gothenburg, Sweden</span>
+                        <span data-i18n="hero.info.location">Gothenburg, Sweden</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-language"></i>
-                        <span>Chinese (Native) • English (Fluent)</span>
+                        <span data-i18n="hero.info.languages">Chinese (Native) • English (Fluent)</span>
                     </div>
                 </div>
                 <div class="hero-contact">
@@ -92,7 +106,7 @@
                             <i class="fas fa-envelope"></i>
                         </a>
                         <div>
-                            <h3><a href="mailto:xuhao.cth@gmail.com" class="contact-text-link">Email</a></h3>
+                            <h3><a href="mailto:xuhao.cth@gmail.com" class="contact-text-link" data-i18n="hero.contact.email">Email</a></h3>
                             <p>xuhao.cth@gmail.com</p>
                         </div>
                     </div>
@@ -101,7 +115,7 @@
                             <i class="fab fa-linkedin"></i>
                         </a>
                         <div>
-                            <h3><a href="https://www.linkedin.com/in/hao-xu-b277231b8/" target="_blank" class="contact-text-link">LinkedIn</a></h3>
+                            <h3><a href="https://www.linkedin.com/in/hao-xu-b277231b8/" target="_blank" class="contact-text-link" data-i18n="hero.contact.linkedin">LinkedIn</a></h3>
                             <p>https://www.linkedin.com/in/hao-xu-b277231b8/</p>
                         </div>
                     </div>
@@ -110,7 +124,7 @@
                             <i class="fas fa-phone"></i>
                         </a>
                         <div>
-                            <h3><a href="#" class="contact-text-link phone-copy" data-phone="(+46) 0724430299">Phone</a></h3>
+                            <h3><a href="#" class="contact-text-link phone-copy" data-phone="(+46) 0724430299" data-i18n="hero.contact.phone">Phone</a></h3>
                             <p>(+46) 0724430299</p>
                         </div>
                     </div>
@@ -119,14 +133,14 @@
                             <i class="fab fa-weixin"></i>
                         </a>
                         <div>
-                            <h3><a href="#" class="contact-text-link wechat-copy" data-wechat="Magnetrician">WeChat</a></h3>
+                            <h3><a href="#" class="contact-text-link wechat-copy" data-wechat="Magnetrician" data-i18n="hero.contact.wechat">WeChat</a></h3>
                             <p>Magnetrician</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="profile-image">
-                <img src="profilePhoto.jpg" alt="Your Name">
+                <img src="assets/images/profile/profile-main.webp" alt="Your Name">
             </div>
         </div>
     </section>
@@ -136,11 +150,11 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container-skills">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title" data-i18n="skills.title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category" data-category="1">
                     <div class="category-header">
-                        <h3>Data Analytics & Data Science</h3>
+                        <h3 data-i18n="skills.category1">Data Analytics & Data Science</h3>
                         <button class="sort-btn" onclick="sortSkills(1)">
                             <i class="fas fa-sort-amount-down"></i>
                         </button>
@@ -186,7 +200,7 @@
                 </div>
                 <div class="skill-category" data-category="2">
                     <div class="category-header">
-                        <h3>Data Engineering & Development</h3>
+                        <h3 data-i18n="skills.category2">Data Engineering & Development</h3>
                         <button class="sort-btn" onclick="sortSkills(2)">
                             <i class="fas fa-sort-amount-down"></i>
                         </button>
@@ -238,7 +252,7 @@
                 </div>
                 <div class="skill-category" data-category="3">
                     <div class="category-header">
-                        <h3>Visualization & BI</h3>
+                        <h3 data-i18n="skills.category3">Visualization & BI</h3>
                         <button class="sort-btn" onclick="sortSkills(3)">
                             <i class="fas fa-sort-amount-down"></i>
                         </button>
@@ -277,47 +291,48 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container-timeline">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title" data-i18n="experience.title">Professional Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Data Scientist</h3>
-                        <h4>Stena Line</h4>
+                        <h3 data-i18n="experience.stena.title">Data Scientist</h3>
+                        <h4 data-i18n="experience.stena.company">Stena Line</h4>
                         <p class="timeline-date">2022.08 - 2025.07</p>
-                        <p class="timeline-description">Primarily focus on end-to-end business data analysis — from data extraction 
+                        <p class="timeline-description" data-i18n="experience.stena.description">Primarily focus on end-to-end business data analysis — from data extraction 
                             and processing to visualization and reporting — to optimize operational processes and enhance decision-making. Some projects such as:</p>
                         <ul>
-                            <li>Improved estimated ready-for-pickup times for freight using historical data analysis.</li>
-                            <li>Developed Power BI dashboards to visualize, monitor and track operations at Ports and Terminals, which have been in continuous use for over two years.</li>
-                            <li>Applied Causal Impact Analysis to evaluate and confirm the benefits of a pricing model.</li>
+                            <li data-i18n="experience.stena.bullet1">Improved estimated ready-for-pickup times for freight using historical data analysis.</li>
+                            <li data-i18n="experience.stena.bullet2">Developed Power BI dashboards to visualize, monitor and track operations at Ports and Terminals, which have been in continuous use for over two years.</li>
+                            <li data-i18n="experience.stena.bullet3">Applied Causal Impact Analysis to evaluate and confirm the benefits of a pricing model.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Research Assistant (Data Analyst)</h3>
-                        <h4>Chalmers University of Technology</h4>
+                        <h3 data-i18n="experience.chalmers.title">Research Assistant (Data Analyst)</h3>
+                        <h4 data-i18n="experience.chalmers.company">Chalmers University of Technology</h4>
                         <p class="timeline-date">2021.04 - 2022.06</p>
-                        <p class="timeline-description">Primarily focused on analyzing changes in delivery patterns and customer behavior during COVID-19, providing actionable insights 
+                        <p class="timeline-description" data-i18n="experience.chalmers.description">Primarily focused on analyzing changes in delivery patterns and customer behavior during COVID-19, providing actionable insights 
                             for logistics and retail. Worked on end-to-end research projects — from data collection and modeling to visualization and reporting.</p>
                         <ul>
-                            <li>Investigated changes in delivery patterns and customer behavior during COVID-19.</li>
-                            <li>Conducted data collection, modeling, analysis, and visualization (in Python and Tableau).</li>
-                            <li>Confirmed post-pandemic shifts in spending and online shopping trends.</li>
+                            <li data-i18n="experience.chalmers.bullet1">Investigated changes in delivery patterns and customer behavior during COVID-19.</li>
+                            <li data-i18n="experience.chalmers.bullet2">Conducted data collection, modeling, analysis, and visualization (in Python and Tableau).</li>
+                            <li data-i18n="experience.chalmers.bullet3">Confirmed post-pandemic shifts in spending and online shopping trends.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Supply Chain Planner (Intern)</h3>
-                        <h4>Midea Property Group</h4>
+                        <h3 data-i18n="experience.midea.title">Supply Chain Planner (Intern)</h3>
+                        <h4 data-i18n="experience.midea.company">Midea Property Group</h4>
                         <p class="timeline-date">2019.06 - 2019.11</p>
-                        <p class="timeline-description">Primarily engaged in supply chain planning and operations support, with a focus on demand forecasting, inventory analysis, 
-                            and logistics coordination. Assisted in end-to-end planning workflows to improve supply chain efficiency.</p>
+                        <p class="timeline-description" data-i18n="experience.midea.description">Supported a supply chain management internship project focused on 
+                            demand forecasting, inventory optimization, logistics coordination, and procurement analysis to enhance overall planning efficiency and 
+                            strategic decision-making.
+                        </p>
                         <ul>
-                            <li>Provided technical support for 200+ users across multiple locations</li>
-                            <li>Managed network infrastructure and security protocols</li>
-                            <li>Implemented new software solutions and user training programs</li>
+                            <li data-i18n="experience.midea.bullet1">Conducted demand forecasting and inventory analysis to support supply chain planning, improving forecast accuracy and reducing stock imbalances across multiple business units.</li>
+                            <li data-i18n="experience.midea.bullet2">Performed market analysis on procurement categories, identifying and evaluating potential suppliers to optimize cost, quality, and lead time, supporting strategic sourcing decisions.</li>
                         </ul>
                     </div>
                 </div>
@@ -326,24 +341,26 @@
     </section>
 
 
+    
+    
 
 
 
     <!-- Education Section -->
     <section id="education" class="education">
         <div class="container-education">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title" data-i18n="education.title">Education</h2>
             <div class="education-grid">
                 <div class="education-card">
                     <div class="education-icon">
                         <i class="fas fa-university"></i>
                     </div>
                     <div class="education-content">
-                        <h2>Master of Science</h2>
-                        <h3>Supply Chain Management</h3>
-                        <p class="education-university">Chalmers University of Technology</p>
+                        <h2 data-i18n="education.master.degree">Master of Science</h2>
+                        <h3 data-i18n="education.master.major">Supply Chain Management</h3>
+                        <p class="education-university" data-i18n="education.master.university">Chalmers University of Technology</p>
                         <p class="education-date">2020.09 - 2022.08</p>
-                        <p class="education-location">Gothenburg, Sweden</p>
+                        <p class="education-location" data-i18n="education.master.location">Gothenburg, Sweden</p>
                     </div>
                 </div>
                 <div class="education-card">
@@ -351,11 +368,11 @@
                         <i class="fas fa-university"></i>
                     </div>
                     <div class="education-content">
-                        <h2>Erasmus Exchange</h2>
-                        <h3>Operations Management and Logistics</h3>
-                        <p class="education-university">Eindhoven University of Technology</p>
+                        <h2 data-i18n="education.erasmus.degree">Erasmus Exchange</h2>
+                        <h3 data-i18n="education.erasmus.major">Operations Management and Logistics</h3>
+                        <p class="education-university" data-i18n="education.erasmus.university">Eindhoven University of Technology</p>
                         <p class="education-date">2021.09 - 2022.02</p>
-                        <p class="education-location">Eindhoven, Netherlands</p>
+                        <p class="education-location" data-i18n="education.erasmus.location">Eindhoven, Netherlands</p>
                     </div>
                 </div>
                 <div class="education-card">
@@ -363,11 +380,11 @@
                         <i class="fas fa-university"></i>
                     </div>
                     <div class="education-content">
-                        <h2>Bachelor of Engineering</h2>
-                        <h3>Industrial Engineering</h3>
-                        <p class="education-university">South China University of Technology</p>
+                        <h2 data-i18n="education.bachelor.degree">Bachelor of Engineering</h2>
+                        <h3 data-i18n="education.bachelor.major">Industrial Engineering</h3>
+                        <p class="education-university" data-i18n="education.bachelor.university">South China University of Technology</p>
                         <p class="education-date">2016.09 - 2020.07</p>
-                        <p class="education-location">Guangzhou, China</p>
+                        <p class="education-location" data-i18n="education.bachelor.location">Guangzhou, China</p>
                     </div>
                 </div>
             </div>
@@ -377,32 +394,32 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container-projects">
-            <h2 class="section-title">Featured Projects</h2>
+                            <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Track & Trace Dashboard</h3>
+                        <h3 data-i18n="projects.tracktrace.title">Track & Trace Dashboard</h3>
                         <div class="project-meta">
                             <span class="project-company">Stena Line, Sweden</span>
                             <span class="project-date">2023.03 - 2023.10</span>
                         </div>
-                        <p>Under the demand of manager, I independently designed and developed a Power BI dashboard to 
+                        <p data-i18n="projects.tracktrace.description">Under the demand of manager, I independently designed and developed a Power BI dashboard to 
                             monitor port operations and efficiency at multiple granularities (daily, weekly, monthly). Led the full development cycle, 
                             including <strong><u>data extraction via SQL</u></strong>, <strong><u>data cleaning with Python/Power Query</u></strong>, and <strong><u>data modeling/visualization 
                             in Power BI</u></strong>. Engaged stakeholders to refine requirements and iteratively improved the solution based on feedback. 
                             Deployed the dashboard to production, creating the first centralized tool for port performance monitoring.<br> <br>
-                            The dashboard has been actively used for <strong><u></u>over 1.5 years</u></strong>, delivering significant value by enhancing operational 
+                            The dashboard has been actively used for <strong><u>over 1.5 years</u></strong>, delivering significant value by enhancing operational 
                             visibility and decision-making.</p>
                         <div class="project-gallery">
                             <div class="gallery-container">
-                                <img src="images/Project1.1.jpg" alt="Dashboard Screenshot 1" class="gallery-thumbnail" data-project="0" data-image="0">
-                                <img src="images/Project1.2.jpg" alt="Dashboard Screenshot 2" class="gallery-thumbnail" data-project="0" data-image="1">
-                                <img src="images/Project1.3.jpg" alt="Dashboard Screenshot 3" class="gallery-thumbnail" data-project="0" data-image="2">
-                                <img src="images/Project1.4.jpg" alt="Dashboard Screenshot 4" class="gallery-thumbnail" data-project="0" data-image="3">
-                                <img src="images/Project1.5.jpg" alt="Dashboard Screenshot 5" class="gallery-thumbnail" data-project="0" data-image="4">
+                                <img src="assets/images/projects/project1/project1-1.jpg" alt="Dashboard Screenshot 1" class="gallery-thumbnail" data-project="0" data-image="0">
+                                <img src="assets/images/projects/project1/project1-2.jpg" alt="Dashboard Screenshot 2" class="gallery-thumbnail" data-project="0" data-image="1">
+                                <img src="assets/images/projects/project1/project1-3.jpg" alt="Dashboard Screenshot 3" class="gallery-thumbnail" data-project="0" data-image="2">
+                                <img src="assets/images/projects/project1/project1-4.jpg" alt="Dashboard Screenshot 4" class="gallery-thumbnail" data-project="0" data-image="3">
+                                <img src="assets/images/projects/project1/project1-5.jpg" alt="Dashboard Screenshot 5" class="gallery-thumbnail" data-project="0" data-image="4">
                             </div>
                             <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
                                 <i class="fas fa-chevron-left"></i>
@@ -427,32 +444,31 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Master Thesis – Supply Chain & Logistics</h3>
+                        <h3 data-i18n="projects.thesis.title">Master Thesis – Supply Chain & Logistics</h3>
                         <div class="project-meta">
                             <span class="project-company">Chalmers University, Sweden</span>
                             <span class="project-date">2022.01 - 2022.08</span>
                         </div>
-                        <p>Assessing the Economic and Environmental Effects of Dry Port and Triangulation Transport on the 
+                        <p data-i18n="projects.thesis.subtitle">Assessing the Economic and Environmental Effects of Dry Port and Triangulation Transport on the 
                             Empty Container Repositioning Problem</p>
                         <ul>
-                            <li>Conducted research on empty container repositioning (ECR) in Sweden’s inland container logistics, 
+                            <li data-i18n="projects.thesis.bullet1">Conducted research on empty container repositioning (ECR) in Sweden's inland container logistics, 
                                 focusing on economic and environmental impacts of dry ports and triangulation transport.
                             </li>
-                            <li>Built three <strong><u>Agent-based Discrete-event Simulation Models</u></strong> using AnyLogic with real operational data: 
+                            <li data-i18n="projects.thesis.bullet2">Built three <strong><u>Agent-based Discrete-event Simulation Models</u></strong> using AnyLogic with real operational data: 
                                 (1) with dry port, (2) without dry port, (3) with dry port plus triangulation. Simulated container flows, 
                                 costs, and CO₂ emissions to evaluate efficiency and sustainability.
                             </li>
-                            <li>Results showed dry ports reduced transport costs by <strong><u>66.36%</u></strong> and emissions by <strong><u>78.86%</u></strong>; 
+                            <li data-i18n="projects.thesis.bullet3">Results showed dry ports reduced transport costs by <strong><u>66.36%</u></strong> and emissions by <strong><u>78.86%</u></strong>; 
                                 triangulation further decreased costs by <strong><u>25.12%</u></strong> and emissions by <strong><u>7.85%</u></strong>.
                             </li>
                         </ul>
                         <div class="project-gallery">
                             <div class="gallery-container">
-                                <img src="images/Project 3.1.jpg" alt="Thesis Research 1" class="gallery-thumbnail" data-project="1" data-image="0">
-                                <img src="images/Project 3.2.jpg" alt="Thesis Research 2" class="gallery-thumbnail" data-project="1" data-image="1">
-                                <img src="images/Project 3.3.jpg" alt="Thesis Research 3" class="gallery-thumbnail" data-project="1" data-image="2">
-                                <img src="images/Project 3.4.jpg" alt="Thesis Research 4" class="gallery-thumbnail" data-project="1" data-image="3">
-                                <img src="images/Project 3.5.jpg" alt="Thesis Research 5" class="gallery-thumbnail" data-project="1" data-image="4">
+                                <img src="assets/images/projects/project3/Project 3.1.jpg" alt="Thesis Research 1" class="gallery-thumbnail" data-project="1" data-image="0">
+                                <img src="assets/images/projects/project3/Project 3.2.jpg" alt="Thesis Research 2" class="gallery-thumbnail" data-project="1" data-image="1">
+                                <img src="assets/images/projects/project3/Project 3.3.jpg" alt="Thesis Research 3" class="gallery-thumbnail" data-project="1" data-image="2">
+                                <img src="assets/images/projects/project3/Project 3.4.jpg" alt="Thesis Research 4" class="gallery-thumbnail" data-project="1" data-image="3">
                             </div>
                             <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
                                 <i class="fas fa-chevron-left"></i>
@@ -475,35 +491,35 @@
                         <i class="fas fa-globe"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Full-Stack Serverless Photography Portfolio Website</h3>
+                        <h3 data-i18n="projects.photography.title">Full-Stack Serverless Photography Portfolio Website</h3>
                         <div class="project-meta">
                             <span class="project-company">Personal Project — <a href="https://www.haoexplore.com" target="_blank" class="project-link">www.haoexplore.com</a></span>
                             <span class="project-date">2025.07 - 2025.08</span>
                         </div>
-                        <p>Independently built a <strong><u></u>AWS-cloud-powered photography website</u></strong> from scratch, combining personal passion with full-stack development 
+                        <p data-i18n="projects.photography.description">Independently built a <strong><u>AWS-cloud-powered photography website</u></strong> from scratch, combining personal passion with full-stack development 
                             practice to showcase both creative work and technical skills.</p>
                             <ul>
-                                <li>Frontend: Designed and deployed a fully responsive website using <strong><u>HTML5</u></strong>, <strong><u>CSS3</u></strong>, and <strong><u>JavaScript</u></strong>, 
+                                <li data-i18n="projects.photography.bullet1">Frontend: Designed and deployed a fully responsive website using <strong><u>HTML5</u></strong>, <strong><u>CSS3</u></strong>, and <strong><u>JavaScript</u></strong>, 
                                     featuring interactive galleries, animations, map integration, and 360° panoramic view.
                                 </li>
-                                <li>Backend: Built a serverless architecture on AWS including <strong><u>API Gateway (REST APIs)</u></strong>, <strong><u>AWS Lambda (Python)</u></strong>, 
+                                <li data-i18n="projects.photography.bullet2">Backend: Built a serverless architecture on AWS including <strong><u>API Gateway (REST APIs)</u></strong>, <strong><u>AWS Lambda (Python)</u></strong>, 
                                     S3 (storage), DynamoDB (NoSQL DB), and SES (automated emails).
                                 </li>
-                                <li>Implemented photo processing pipeline with automatic compression, WebP conversion, and thumbnail generation to optimize performance and user experience.
+                                <li data-i18n="projects.photography.bullet3">Implemented photo processing pipeline with automatic compression, WebP conversion, and thumbnail generation to optimize performance and user experience.
                                 </li>
                             </ul>    
                         <div class="project-gallery">
                             <div class="gallery-container">
-                                <img src="images/Project 2.1.png" alt="Website Screenshot 1" class="gallery-thumbnail" data-project="2" data-image="0">
-                                <img src="images/Project 2.2.png" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="2" data-image="1">
-                                <img src="images/Project 2.3.png" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="2" data-image="2">
-                                <img src="images/Project 2.5.png" alt="Website Screenshot 4" class="gallery-thumbnail" data-project="2" data-image="3">
-                                <img src="images/Project 2.6.png" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="4">
-                                <img src="images/Project 2.7.png" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="2" data-image="5">
-                                <img src="images/Project 2.8.jpg" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="2" data-image="6">
-                                <img src="images/Project 2.9.jpg" alt="Website Screenshot 4" class="gallery-thumbnail" data-project="2" data-image="7">
-                                <img src="images/Project 2.10.jpg" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="8">
-                                <img src="images/Project 2.11.jpg" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="9">
+                                <img src="assets/images/projects/project2/Project 2.1.png" alt="Website Screenshot 1" class="gallery-thumbnail" data-project="2" data-image="0">
+                                <img src="assets/images/projects/project2/Project 2.2.png" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="2" data-image="1">
+                                <img src="assets/images/projects/project2/Project 2.3.png" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="2" data-image="2">
+                                <img src="assets/images/projects/project2/Project 2.5.png" alt="Website Screenshot 4" class="gallery-thumbnail" data-project="2" data-image="3">
+                                <img src="assets/images/projects/project2/Project 2.6.png" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="4">
+                                <img src="assets/images/projects/project2/Project 2.7.png" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="2" data-image="5">
+                                <img src="assets/images/projects/project2/Project 2.8.jpg" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="2" data-image="6">
+                                <img src="assets/images/projects/project2/Project 2.9.jpg" alt="Website Screenshot 4" class="gallery-thumbnail" data-project="2" data-image="7">
+                                <img src="assets/images/projects/project2/Project 2.10.jpg" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="8">
+                                <img src="assets/images/projects/project2/Project 2.11.jpg" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="9">
                             </div>
                             <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
                                 <i class="fas fa-chevron-left"></i>
@@ -529,15 +545,15 @@
     <!-- Interest Section -->
     <section id="interest" class="interest">
         <div class="container-interest">
-            <h2 class="section-title">Interests & Hobbies</h2>
+            <h2 class="section-title" data-i18n="interest.title">Interests & Hobbies</h2>
             <div class="interest-grid">
                 <div class="interest-card">
                     <div class="interest-icon">
                         <i class="fas fa-plane"></i>
                     </div>
                     <div class="interest-content">
-                        <h3>Traveling</h3>
-                        <p>The essence of my love for traveling lies in a deep curiosity and passion for the world. Experiencing diverse natural landscapes, 
+                        <h3 data-i18n="interest.traveling.title">Traveling</h3>
+                        <p data-i18n="interest.traveling.description">The essence of my love for traveling lies in a deep curiosity and passion for the world. Experiencing diverse natural landscapes, 
                             learning about different lifestyles and local cultures makes me feel that the world is truly wonderful, authentic, and full of life.</p>
                     </div>
                 </div>
@@ -546,9 +562,9 @@
                         <i class="fas fa-camera"></i>
                     </div>
                     <div class="interest-content">
-                        <h3>Photography</h3>
-                        <p>I believe everything eventually fades away — nothing can truly be kept except memories. Memories are the only things that are real and uniquely ours. 
-                            That’s why I love using my lens to capture the beauty of the world, making those memories clearer and longer-lasting.</p>
+                        <h3 data-i18n="interest.photography.title">Photography</h3>
+                        <p data-i18n="interest.photography.description">I believe everything eventually fades away — nothing can truly be kept except memories. Memories are the only things that are real and uniquely ours. 
+                            That's why I love using my lens to capture the beauty of the world, making those memories clearer and longer-lasting.</p>
                     </div>
                         <a href="https://www.haoexplore.com" target="_blank" class="interest-link">www.haoexplore.com</a>
                 </div>
@@ -557,8 +573,8 @@
                         <i class="fas fa-hiking"></i>
                     </div>
                     <div class="interest-content">
-                        <h3>Hiking & Nature</h3>
-                        <p>I am someone who deeply loves nature. In modern cities, where we live surrounded by concrete and steel, hiking and camping 
+                        <h3 data-i18n="interest.hiking.title">Hiking & Nature</h3>
+                        <p data-i18n="interest.hiking.description">I am someone who deeply loves nature. In modern cities, where we live surrounded by concrete and steel, hiking and camping 
                             offer the best and most accessible way to reconnect with the natural world.</p>
                     </div>
                 </div>
@@ -567,9 +583,9 @@
                         <i class="fas fa-book"></i>
                     </div>
                     <div class="interest-content">
-                        <h3>Reading & Learning</h3>
-                        <p>Reading and learning share the same essence as traveling: both are explorations of the world driven by curiosity.
-                            To me, the true sign of aging is not years, but losing the ability to learn new knowledge, embrace new ideas, and refresh one’s perspectives.
+                        <h3 data-i18n="interest.reading.title">Reading & Learning</h3>
+                        <p data-i18n="interest.reading.description">Reading and learning share the same essence as traveling: both are explorations of the world driven by curiosity.
+                            To me, the true sign of aging is not years, but losing the ability to learn new knowledge, embrace new ideas, and refresh one's perspectives.
                         </p>
                     </div>
                 </div>
@@ -597,6 +613,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html> 

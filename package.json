@@ -1,0 +1,33 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, responsive personal portfolio website for Data Analysts and IT professionals",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "build": "echo 'No build process needed for static site'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "data-analyst",
+    "responsive",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/portfolio/issues"
+  },
+  "homepage": "https://github.com/yourusername/portfolio#readme"
+}
