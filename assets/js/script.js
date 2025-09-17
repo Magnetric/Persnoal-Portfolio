@@ -367,7 +367,7 @@ const statsObserver = new IntersectionObserver((entries) => {
 
 
 // Phone number copy functionality
-document.querySelectorAll('.phone-copy').forEach(element => {
+document.querySelectorAll('.phone-number').forEach(element => {
     element.addEventListener('click', function(e) {
         e.preventDefault();
         
@@ -376,12 +376,12 @@ document.querySelectorAll('.phone-copy').forEach(element => {
         // Copy to clipboard
         if (navigator.clipboard && window.isSecureContext) {
             navigator.clipboard.writeText(phoneNumber).then(() => {
-                showCopyNotification('Phone number copied!');
+                showCopyNotification(`${phoneNumber} copied!`);
             }).catch(() => {
-                fallbackCopy(phoneNumber);
+                fallbackCopy(phoneNumber, 'phone');
             });
         } else {
-            fallbackCopy(phoneNumber);
+            fallbackCopy(phoneNumber, 'phone');
         }
     });
 });
@@ -421,14 +421,18 @@ function fallbackCopy(text, type = 'phone') {
         document.execCommand('copy');
         if (type === 'wechat') {
             showCopyNotification('WeChat ID copied!');
+        } else if (type === 'phone') {
+            showCopyNotification(`${text} copied!`);
         } else {
-            showCopyNotification('Phone number copied!');
+            showCopyNotification(`${text} copied!`);
         }
     } catch (err) {
         if (type === 'wechat') {
             showCopyNotification('Failed to copy WeChat ID');
+        } else if (type === 'phone') {
+            showCopyNotification(`Failed to copy ${text}`);
         } else {
-            showCopyNotification('Failed to copy phone number');
+            showCopyNotification(`Failed to copy ${text}`);
         }
     }
     
@@ -893,5 +897,87 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }, 150); // 150ms delay to prevent rapid switching
         }
+    });
+});
+
+// Projects carousel functionality
+let currentProjectIndex = 0;
+let projectsPerView = 3;
+
+function scrollProjects(direction) {
+    const projectsGrid = document.querySelector('.projects-grid');
+    const projectCards = document.querySelectorAll('.project-card');
+    const totalProjects = projectCards.length;
+    
+    // Calculate projects per view based on screen size
+    if (window.innerWidth <= 768) {
+        projectsPerView = 1;
+    } else if (window.innerWidth <= 1024) {
+        projectsPerView = 2;
+    } else {
+        projectsPerView = 3;
+    }
+    
+    const maxIndex = Math.max(0, totalProjects - projectsPerView);
+    
+    if (direction === 'next') {
+        currentProjectIndex = Math.min(currentProjectIndex + 1, maxIndex);
+    } else if (direction === 'prev') {
+        currentProjectIndex = Math.max(currentProjectIndex - 1, 0);
+    }
+    
+    // Calculate the transform value based on container width
+    const containerWidth = document.querySelector('.projects-container').offsetWidth;
+    const cardWidth = containerWidth / projectsPerView;
+    const translateX = -currentProjectIndex * cardWidth;
+    
+    projectsGrid.style.transform = `translateX(${translateX}px)`;
+    
+    // Update button states
+    updateProjectButtons();
+}
+
+function updateProjectButtons() {
+    const prevBtn = document.querySelector('.projects-prev');
+    const nextBtn = document.querySelector('.projects-next');
+    const projectCards = document.querySelectorAll('.project-card');
+    const totalProjects = projectCards.length;
+    
+    // Calculate projects per view based on screen size
+    if (window.innerWidth <= 768) {
+        projectsPerView = 1;
+    } else if (window.innerWidth <= 1024) {
+        projectsPerView = 2;
+    } else {
+        projectsPerView = 3;
+    }
+    
+    const maxIndex = Math.max(0, totalProjects - projectsPerView);
+    
+    if (prevBtn) {
+        prevBtn.style.opacity = currentProjectIndex <= 0 ? '0.5' : '1';
+        prevBtn.style.pointerEvents = currentProjectIndex <= 0 ? 'none' : 'auto';
+    }
+    
+    if (nextBtn) {
+        nextBtn.style.opacity = currentProjectIndex >= maxIndex ? '0.5' : '1';
+        nextBtn.style.pointerEvents = currentProjectIndex >= maxIndex ? 'none' : 'auto';
+    }
+}
+
+// Initialize projects carousel on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait for images to load before calculating positions
+    setTimeout(() => {
+        updateProjectButtons();
+    }, 500);
+    
+    // Update on window resize
+    window.addEventListener('resize', function() {
+        // Reset to first project on mobile, maintain position on desktop
+        if (window.innerWidth <= 768) {
+            currentProjectIndex = 0;
+        }
+        updateProjectButtons();
     });
 }); 

@@ -16,6 +16,7 @@ A modern, responsive personal portfolio website designed specifically for Data A
   - Contact form
 - **Smooth Navigation**: Fixed navigation with smooth scrolling
 - **Mobile Optimized**: Mobile-first responsive design
+- **Multilingual Support**: English, Swedish, Dutch, German, and Chinese
 
 ## Technologies Used
 
@@ -38,10 +39,25 @@ The website uses a professional color palette:
 
 ```
 Portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles
-├── script.js           # JavaScript functionality
-└── README.md           # This file
+├── index.html              # Main portfolio website
+├── resume-paged.html       # Professional resume (PDF-ready)
+├── assets/
+│   ├── css/
+│   │   └── styles.css     # Main CSS styles
+│   ├── js/
+│   │   ├── script.js      # Main JavaScript functionality
+│   │   └── translations.js # Multilingual content
+│   └── images/
+│       ├── profile/        # Profile photos
+│       ├── projects/       # Project screenshots
+│       └── icons/          # Website icons
+├── docs/
+│   ├── README.md           # This file
+│   ├── RESUME-README.md    # Resume documentation
+│   ├── CHANGELOG.md        # Version history
+│   └── MULTILANGUAGE-FEATURE.md # Language feature docs
+├── package.json            # Project configuration
+└── .gitignore             # Git ignore rules
 ```
 
 ## Customization
@@ -85,6 +101,13 @@ Portfolio/
 2. Open `index.html` in a web browser
 3. Customize the content to match your information
 4. Deploy to your preferred hosting service
+
+## Resume Generation
+
+The project includes a professional resume (`resume-paged.html`) that can be easily converted to PDF:
+1. Open `resume-paged.html` in a web browser
+2. Use browser print function (Ctrl+P) to save as PDF
+3. The resume is optimized for A4 paper size
 
 ## Deployment
 

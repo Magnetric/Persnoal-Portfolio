@@ -71,8 +71,7 @@
                     <strong><u>Data Scientist/Engineer</u></strong> with <strong><u>4+ years</u></strong> of experience in analytics, business intelligence, and IT solutions. 
                     Skilled in transforming complex data into actionable insights across industries including supply chain, 
                     logistics, and port operations. Expertise in <strong><u>statistical analysis</u></strong>, <strong><u>data pipelines</u></strong>, <strong><u>modeling</u></strong>, 
-                    <strong><u>machine learning</u></strong>, and <strong><u>visualization</u></strong>. <span class="description-break"></span>Combining technical proficiency with business acumen, I design scalable 
-                    solutions that enhance decision-making and deliver measurable impact.
+                    <strong><u>machine learning</u></strong>, and <strong><u>visualization</u></strong>.
                 </p>
                 <div class="hero-info">
                     <div class="info-item">
@@ -120,12 +119,13 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <a href="#" class="contact-link phone-copy" data-phone="(+46) 0724430299">
+                        <a href="#" class="contact-link">
                             <i class="fas fa-phone"></i>
                         </a>
                         <div>
-                            <h3><a href="#" class="contact-text-link phone-copy" data-phone="(+46) 0724430299" data-i18n="hero.contact.phone">Phone</a></h3>
-                            <p>(+46) 0724430299</p>
+                            <h3 data-i18n="hero.contact.phone">Phone</h3>
+                            <p><span class="phone-number" data-phone="(+46) 0724430299">(+46) 0724430299</span></p>
+                            <p><span class="phone-number" data-phone="(+86) 1812798743">(+86) 1812798743</span></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -301,11 +301,13 @@
                         <p class="timeline-description" data-i18n="experience.stena.description">Primarily focus on end-to-end business data analysis — from data extraction 
                             and processing to visualization and reporting — to optimize operational processes and enhance decision-making. Some projects such as:</p>
                         <ul>
-                            <li data-i18n="experience.stena.bullet1">Improved estimated ready-for-pickup times for freight using historical data analysis.</li>
-                            <li data-i18n="experience.stena.bullet2">Developed Power BI dashboards to visualize, monitor and track operations at Ports and Terminals, which have been in continuous use for over two years.</li>
-                            <li data-i18n="experience.stena.bullet3">Applied Causal Impact Analysis to evaluate and confirm the benefits of a pricing model.</li>
+                            <li data-i18n="experience.stena.bullet1">Improved the accuracy of Estimated Ready for Pick-up Time by integrating real-time ETA updates and applying a zone-based unloading model, while balancing prediction precision with terminal yard efficiency.</li>
+                            <li data-i18n="experience.stena.bullet2">Designed a charging system for trailers that stayed at the port for a long time before picked up, to increase revenue and reduce the port congestion.</li>
+                            <li data-i18n="experience.stena.bullet3">Developed Power BI dashboards to visualize, monitor and track operations at Ports and Terminals, which have been in continuous use for over two years.</li>
+                            <li data-i18n="experience.stena.bullet4">Applied Causal Impact Analysis to evaluate and confirm the benefits of a pricing model.</li>
                         </ul>
                     </div>
+
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
@@ -395,11 +397,101 @@
     <section id="projects" class="projects">
         <div class="container-projects">
                             <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
-            <div class="projects-grid">
+            <div class="projects-container">
+                <button class="projects-nav projects-prev" onclick="scrollProjects('prev')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
+                    <div class="project-content">
+                        <h3 data-i18n="projects.estimatedrpt.title">Estimated Ready for Pick-up Time (Estimated RPT) Optimization</h3>
+                        <div class="project-meta">
+                            <span class="project-company">Stena Line, Sweden</span>
+                            <span class="project-date">2023.09 - 2024.03</span>
+                        </div>
+                        <p data-i18n="projects.estimatedrpt.description">Led the optimization of Estimated Ready for Pick-up Time (Estimated RPT) prediction accuracy through systematic problem decomposition and innovative solution implementation. The project focused on improving both ETA (Estimated Time of Arrival) and unloading duration predictions to enhance terminal operations and customer satisfaction.</p>
+                        <ul>
+                            <li data-i18n="projects.estimatedrpt.bullet1"><strong><u>1. Problem Breakdown</u></strong><br>Estimated RPT = ETA + Unloading Duration. Improving accuracy requires optimizing both parts.<br>• ETA: Highly uncertain, influenced by route, weather, and vessel speed, often with deviations of several hours.<br>• Unloading Duration: Large vessels take 6–10 hours to unload, creating significant gaps between the first and last Real RPT.</li>
+                            <li data-i18n="projects.estimatedrpt.bullet2"><strong><u>2. ETA Optimization</u></strong><br>• Use Stena Line's offshore real-time ETA system via API integration.<br>• Refresh ETA at key stages: departure, hourly during voyage, and upon arrival.</li>
+                            <li data-i18n="projects.estimatedrpt.bullet3"><strong><u>3. Unloading Duration Optimization</u></strong><br><strong>3.1 Deck and Subsection</strong><br>• Current deck-level grouping is too coarse; unloading times vary within a deck.<br>• Further divide decks into ~6 subsections (front/middle/rear × left/right).<br>• Smaller variance within subsections improves Estimated RPT accuracy.<br><br><strong>3.2 Subsection Trade-off</strong><br>• Too large → high variance, low accuracy.<br>• Too small → sparse data, risk of overfitting, higher operational complexity.<br>• Optimal size determined through analysis and simulation.</li>
+                            <li data-i18n="projects.estimatedrpt.bullet4"><strong><u>4. Accuracy vs. Effectiveness</u></strong><br>Estimated RPT is an interval, Real RPT a time point. Accuracy means the Real RPT falls within the interval. Expanding the interval improves accuracy but reduces prediction effectiveness. Different ports adopt tailored accuracy targets and interval widths.</li>
+                        </ul>
+                        <div class="project-gallery">
+                            <div class="gallery-container">
+                                <img src="assets/images/projects/Project4/1.png" alt="Website Screenshot 1" class="gallery-thumbnail" data-project="3" data-image="0">
+                                <img src="assets/images/projects/Project4/2.jpg" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="3" data-image="1">
+                                <img src="assets/images/projects/Project4/3.jpg" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="3" data-image="2">
+                            </div>
+                            <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav gallery-next" onclick="scrollGallery(this, 'next')">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Data Analysis</span>
+                            <span>API Integration</span>
+                            <span>Predictive Modeling</span>
+                            <span>Statistical Analysis</span>
+                            <span>Simulation</span>
+                            <span>Operations Research</span>
+                        </div>
                     </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 data-i18n="projects.photography.title">Full-Stack Serverless Photography Portfolio Website</h3>
+                        <div class="project-meta">
+                            <span class="project-company">Personal Project — <a href="https://www.haoexplore.com" target="_blank" class="project-link">www.haoexplore.com</a></span>
+                            <span class="project-date">2025.07 - 2025.08</span>
+                        </div>
+                        <p data-i18n="projects.photography.description">As one of my passions, I have always wanted to create a personal website for photography, and now, it is completed. This website is more than just a static gallery — it's an interactive, cloud-powered platform showcasing my photos while demonstrating my end-to-end full-stack development skills.</p>
+                            <ul>
+                                <li data-i18n="projects.photography.bullet1"><strong><u>🎨 Frontend</u></strong><br>I designed and implemented a fully responsive, modern web application using HTML5 | CSS3 | JavaScript ES6+, featuring:<br>1. Interactive Photo Gallery with smooth animations, lazy loading, and intuitive navigation<br>2. 360° Spherical Panoramic View using Pannellum.js for immersive experiences<br>3. Photo Rating System with 5-star ratings and cloud synchronization<br>4. Leaflet.js Map Integration displaying geographic footprints with year-based filtering<br>5. Smart Image Processing with automatic WebP conversion and thumbnail generation<br>6. User Engagement Tools including email subscription and social media integration</li>
+                                <li data-i18n="projects.photography.bullet2"><strong><u>⚙️ Backend (Serverless on AWS)</u></strong><br>Built a highly scalable, cost-efficient serverless 
+                                    architecture on AWS:<br>1. <u>Amazon API Gateway</u> — RESTful API endpoints with CORS configuration and request 
+                                    validation<br>2. <u>AWS Lambda (Python)</u> — Business logic including: Gallery and photo management with CRUD 
+                                    operations; Advanced image processing using Pillow library; Direct S3 upload using presigned URLs 
+                                    (bypassing 10MB API Gateway limit); Photo rating system with device-based user identification, etc<br>
+                                    3. Amazon S3 — Optimized photo storage with WebP format and intelligent tiering<br>4. Amazon DynamoDB — 
+                                    Three-table NoSQL architecture for galleries, photos, and ratings<br>5. AWS Lambda Layers — Pre-built layers 
+                                    for Pillow and requests libraries<br>6. Performance Optimization: WebP format conversion (95% quality originals, 
+                                    40% thumbnails); Parallel photo processing and uploads; Automatic thumbnail generation with smart dimensions; 
+                                    Metadata synchronization between S3 and DynamoDB</li>
+                            </ul>    
+                        <div class="project-gallery">
+                            <div class="gallery-container">
+                                <img src="assets/images/projects/project2/Project 2.1.png" alt="Website Screenshot 1" class="gallery-thumbnail" data-project="2" data-image="0">
+                                <img src="assets/images/projects/project2/Project 2.2.png" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="2" data-image="1">
+                                <img src="assets/images/projects/project2/Project 2.3.png" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="2" data-image="2">
+                                <img src="assets/images/projects/project2/Project 2.5.png" alt="Website Screenshot 4" class="gallery-thumbnail" data-project="2" data-image="3">
+                                <img src="assets/images/projects/project2/Project 2.6.png" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="4">
+                                <img src="assets/images/projects/project2/Project 2.7.png" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="2" data-image="5">
+                                <img src="assets/images/projects/project2/Project 2.8.jpg" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="2" data-image="6">
+                                <img src="assets/images/projects/project2/Project 2.9.jpg" alt="Website Screenshot 4" class="gallery-thumbnail" data-project="2" data-image="7">
+                                <img src="assets/images/projects/project2/Project 2.10.jpg" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="8">
+                                <img src="assets/images/projects/project2/Project 2.11.jpg" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="9">
+                            </div>
+                            <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav gallery-next" onclick="scrollGallery(this, 'next')">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="project-tech">
+                            <span>Full-Stack Web Development</span>
+                            <span>End-to-End Development</span>
+                            <span>AWS Cloud (API Gateway, Lambda, S3, DynamoDB, SES)</span>
+                            <span>UI/UX Design</span>
+                            <span>Serverless Architecture</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
                     <div class="project-content">
                         <h3 data-i18n="projects.tracktrace.title">Track & Trace Dashboard</h3>
                         <div class="project-meta">
@@ -411,14 +503,13 @@
                             including <strong><u>data extraction via SQL</u></strong>, <strong><u>data cleaning with Python/Power Query</u></strong>, and <strong><u>data modeling/visualization 
                             in Power BI</u></strong>. Engaged stakeholders to refine requirements and iteratively improved the solution based on feedback. 
                             Deployed the dashboard to production, creating the first centralized tool for port performance monitoring.<br> <br>
-                            The dashboard has been actively used for <strong><u>over 1.5 years</u></strong>, delivering significant value by enhancing operational 
+                            The dashboard has been actively used for <strong><u>over 2 years</u></strong>, delivering significant value by enhancing operational 
                             visibility and decision-making.</p>
                         <div class="project-gallery">
                             <div class="gallery-container">
                                 <img src="assets/images/projects/project1/project1-1.jpg" alt="Dashboard Screenshot 1" class="gallery-thumbnail" data-project="0" data-image="0">
                                 <img src="assets/images/projects/project1/project1-2.jpg" alt="Dashboard Screenshot 2" class="gallery-thumbnail" data-project="0" data-image="1">
                                 <img src="assets/images/projects/project1/project1-3.jpg" alt="Dashboard Screenshot 3" class="gallery-thumbnail" data-project="0" data-image="2">
-                                <img src="assets/images/projects/project1/project1-4.jpg" alt="Dashboard Screenshot 4" class="gallery-thumbnail" data-project="0" data-image="3">
                                 <img src="assets/images/projects/project1/project1-5.jpg" alt="Dashboard Screenshot 5" class="gallery-thumbnail" data-project="0" data-image="4">
                             </div>
                             <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
@@ -440,9 +531,6 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
                     <div class="project-content">
                         <h3 data-i18n="projects.thesis.title">Master Thesis – Supply Chain & Logistics</h3>
                         <div class="project-meta">
@@ -486,58 +574,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-i18n="projects.photography.title">Full-Stack Serverless Photography Portfolio Website</h3>
-                        <div class="project-meta">
-                            <span class="project-company">Personal Project — <a href="https://www.haoexplore.com" target="_blank" class="project-link">www.haoexplore.com</a></span>
-                            <span class="project-date">2025.07 - 2025.08</span>
-                        </div>
-                        <p data-i18n="projects.photography.description">Independently built a <strong><u>AWS-cloud-powered photography website</u></strong> from scratch, combining personal passion with full-stack development 
-                            practice to showcase both creative work and technical skills.</p>
-                            <ul>
-                                <li data-i18n="projects.photography.bullet1">Frontend: Designed and deployed a fully responsive website using <strong><u>HTML5</u></strong>, <strong><u>CSS3</u></strong>, and <strong><u>JavaScript</u></strong>, 
-                                    featuring interactive galleries, animations, map integration, and 360° panoramic view.
-                                </li>
-                                <li data-i18n="projects.photography.bullet2">Backend: Built a serverless architecture on AWS including <strong><u>API Gateway (REST APIs)</u></strong>, <strong><u>AWS Lambda (Python)</u></strong>, 
-                                    S3 (storage), DynamoDB (NoSQL DB), and SES (automated emails).
-                                </li>
-                                <li data-i18n="projects.photography.bullet3">Implemented photo processing pipeline with automatic compression, WebP conversion, and thumbnail generation to optimize performance and user experience.
-                                </li>
-                            </ul>    
-                        <div class="project-gallery">
-                            <div class="gallery-container">
-                                <img src="assets/images/projects/project2/Project 2.1.png" alt="Website Screenshot 1" class="gallery-thumbnail" data-project="2" data-image="0">
-                                <img src="assets/images/projects/project2/Project 2.2.png" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="2" data-image="1">
-                                <img src="assets/images/projects/project2/Project 2.3.png" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="2" data-image="2">
-                                <img src="assets/images/projects/project2/Project 2.5.png" alt="Website Screenshot 4" class="gallery-thumbnail" data-project="2" data-image="3">
-                                <img src="assets/images/projects/project2/Project 2.6.png" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="4">
-                                <img src="assets/images/projects/project2/Project 2.7.png" alt="Website Screenshot 2" class="gallery-thumbnail" data-project="2" data-image="5">
-                                <img src="assets/images/projects/project2/Project 2.8.jpg" alt="Website Screenshot 3" class="gallery-thumbnail" data-project="2" data-image="6">
-                                <img src="assets/images/projects/project2/Project 2.9.jpg" alt="Website Screenshot 4" class="gallery-thumbnail" data-project="2" data-image="7">
-                                <img src="assets/images/projects/project2/Project 2.10.jpg" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="8">
-                                <img src="assets/images/projects/project2/Project 2.11.jpg" alt="Website Screenshot 5" class="gallery-thumbnail" data-project="2" data-image="9">
-                            </div>
-                            <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav gallery-next" onclick="scrollGallery(this, 'next')">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                        <div class="project-tech">
-                            <span>Full-Stack Web Development</span>
-                            <span>End-to-End Development</span>
-                            <span>AWS Cloud (API Gateway, Lambda, S3, DynamoDB, SES)</span>
-                            <span>UI/UX Design</span>
-                            <span>Serverless Architecture</span>
-                            <span>Python</span>
-                        </div>
-                    </div>
+                
                 </div>
+                <button class="projects-nav projects-next" onclick="scrollProjects('next')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>

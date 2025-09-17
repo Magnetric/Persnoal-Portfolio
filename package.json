@@ -17,17 +17,18 @@
     "css",
     "javascript"
   ],
-  "author": "Your Name",
+  "author": "Hao Xu",
   "license": "MIT",
   "devDependencies": {
     "live-server": "^1.2.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/portfolio.git"
+    "url": "git+https://github.com/haoxu/portfolio.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/portfolio/issues"
+    "url": "https://github.com/haoxu/portfolio/issues"
   },
-  "homepage": "https://github.com/yourusername/portfolio#readme"
+  "homepage": "https://www.haoprofile.site"
 }
+

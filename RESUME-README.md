@@ -1,16 +1,15 @@
 # Professional Resume - Hao Xu
 
-This folder contains two versions of your professional resume in HTML format, designed to be easily converted to PDF.
+This folder contains your professional resume in HTML format, designed to be easily converted to PDF.
 
 ## Files
 
-1. **`resume.html`** - Standard HTML resume with print-optimized CSS
-2. **`resume-paged.html`** - Enhanced version using Paged.js for better PDF control
+1. **`resume-paged.html`** - Enhanced version using Paged.js for better PDF control
 
 ## How to Convert to PDF
 
 ### Method 1: Browser Print (Recommended)
-1. Open either `resume.html` or `resume-paged.html` in your web browser
+1. Open `resume-paged.html` in your web browser
 2. Press `Ctrl+P` (Windows) or `Cmd+P` (Mac) to open the print dialog
 3. Select "Save as PDF" as the destination
 4. Choose A4 paper size
@@ -41,7 +40,7 @@ You can also use online HTML to PDF converters:
 - **Header**: Name, title, and contact information
 - **Professional Summary**: Concise overview of skills and experience
 - **Technical Skills**: Organized by categories (Data Analytics, Engineering, Visualization, Domain Expertise)
-- **Professional Experience**: Detailed work history with achievements
+- **Working Experience**: Detailed work history with achievements
 - **Education**: Academic background
 - **Key Projects**: Highlighted projects with technologies used
 
@@ -69,7 +68,7 @@ You can easily customize the resume by:
 
 ## Browser Compatibility
 
-Both files work well with:
+The file works well with:
 - Chrome/Chromium (recommended)
 - Firefox
 - Safari
@@ -81,7 +80,6 @@ For the best PDF generation results, use Chrome or Chromium browsers.
 
 ```
 Portfolio/
-├── resume.html          # Standard resume version
 ├── resume-paged.html    # Paged.js enhanced version
 └── RESUME-README.md     # This file
 ```
