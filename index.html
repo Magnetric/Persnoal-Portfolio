@@ -407,13 +407,18 @@
                         <h3 data-i18n="projects.estimatedrpt.title">Estimated Ready for Pick-up Time (Estimated RPT) Optimization</h3>
                         <div class="project-meta">
                             <span class="project-company">Stena Line, Sweden</span>
-                            <span class="project-date">2023.09 - 2024.03</span>
+                            <span class="project-date">2024.09 - 2024.12</span>
                         </div>
                         <p data-i18n="projects.estimatedrpt.description">Led the optimization of Estimated Ready for Pick-up Time (Estimated RPT) prediction accuracy through systematic problem decomposition and innovative solution implementation. The project focused on improving both ETA (Estimated Time of Arrival) and unloading duration predictions to enhance terminal operations and customer satisfaction.</p>
                         <ul>
                             <li data-i18n="projects.estimatedrpt.bullet1"><strong><u>1. Problem Breakdown</u></strong><br>Estimated RPT = ETA + Unloading Duration. Improving accuracy requires optimizing both parts.<br>• ETA: Highly uncertain, influenced by route, weather, and vessel speed, often with deviations of several hours.<br>• Unloading Duration: Large vessels take 6–10 hours to unload, creating significant gaps between the first and last Real RPT.</li>
                             <li data-i18n="projects.estimatedrpt.bullet2"><strong><u>2. ETA Optimization</u></strong><br>• Use Stena Line's offshore real-time ETA system via API integration.<br>• Refresh ETA at key stages: departure, hourly during voyage, and upon arrival.</li>
-                            <li data-i18n="projects.estimatedrpt.bullet3"><strong><u>3. Unloading Duration Optimization</u></strong><br><strong>3.1 Deck and Subsection</strong><br>• Current deck-level grouping is too coarse; unloading times vary within a deck.<br>• Further divide decks into ~6 subsections (front/middle/rear × left/right).<br>• Smaller variance within subsections improves Estimated RPT accuracy.<br><br><strong>3.2 Subsection Trade-off</strong><br>• Too large → high variance, low accuracy.<br>• Too small → sparse data, risk of overfitting, higher operational complexity.<br>• Optimal size determined through analysis and simulation.</li>
+                                <li data-i18n="projects.estimatedrpt.bullet3"><strong><u>3. Unloading Duration Optimization</u></strong><br><strong>
+                                3.1 Deck and Subsection</strong><br>• Current deck-level grouping is too coarse; unloading times vary within a deck.
+                                <br>• Further divide decks into ~6 subsections (front/middle/rear × left/right).<br>• Smaller variance within 
+                                subsections improves Estimated RPT accuracy.<br>• While zone-level averages provide a baseline, unloading times need also be adjusted for the vessel's time of arrival, which significantly impacts the unloading time.<br><br><strong>3.2 Subsection Trade-off</strong><br>• Too large → 
+                                high variance, low accuracy.<br>• Too small → sparse data, risk of overfitting, higher operational complexity.<br>
+                                • Optimal size determined through analysis and simulation.</li>
                             <li data-i18n="projects.estimatedrpt.bullet4"><strong><u>4. Accuracy vs. Effectiveness</u></strong><br>Estimated RPT is an interval, Real RPT a time point. Accuracy means the Real RPT falls within the interval. Expanding the interval improves accuracy but reduces prediction effectiveness. Different ports adopt tailored accuracy targets and interval widths.</li>
                         </ul>
                         <div class="project-gallery">
@@ -493,18 +498,20 @@
                 </div>
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 data-i18n="projects.tracktrace.title">Track & Trace Dashboard</h3>
+                        <h3 data-i18n="projects.tracktrace.title">Power BI-Based Port Operations Monitoring System</h3>
                         <div class="project-meta">
                             <span class="project-company">Stena Line, Sweden</span>
                             <span class="project-date">2023.03 - 2023.10</span>
                         </div>
-                        <p data-i18n="projects.tracktrace.description">Under the demand of manager, I independently designed and developed a Power BI dashboard to 
-                            monitor port operations and efficiency at multiple granularities (daily, weekly, monthly). Led the full development cycle, 
-                            including <strong><u>data extraction via SQL</u></strong>, <strong><u>data cleaning with Python/Power Query</u></strong>, and <strong><u>data modeling/visualization 
-                            in Power BI</u></strong>. Engaged stakeholders to refine requirements and iteratively improved the solution based on feedback. 
-                            Deployed the dashboard to production, creating the first centralized tool for port performance monitoring.<br> <br>
-                            The dashboard has been actively used for <strong><u>over 2 years</u></strong>, delivering significant value by enhancing operational 
-                            visibility and decision-making.</p>
+                        <p data-i18n="projects.tracktrace.description">At the request of management, I designed and developed a Power BI Operations Monitoring System to provide multi-dimensional analysis of port efficiency (daily, weekly, monthly, as well as vessel-level and port-level granularities). This was the department's first centralized performance monitoring tool, enabling data-driven and real-time operational management. The dashboard later served as the foundation for multiple spin-off projects that further improved port efficiency.</p>
+                        <p data-i18n="projects.tracktrace.keycontributions">Key Contributions and Technical Details:</p>
+                        <ul>
+                            <li data-i18n="projects.tracktrace.bullet1"><strong><u>Data Integration & Extraction:</u></strong><br>• Wrote complex SQL queries to extract vessel arrival/departure, loading/unloading, gate operations, and trailer movement data.<br>• Built automated ETL pipelines using Python scripts and Power Query for bulk data ingestion, cleaning, and transformation. Tasks included filling missing timestamps, validating voyage IN/OUT sequences, deduplication, and outlier handling.<br>• Applied Python for advanced ETL logic, such as irregular timestamp conversion and batch correction of abnormal voyages.</li>
+                            <li data-i18n="projects.tracktrace.bullet2"><strong><u>Data Modeling:</u></strong><br>• Designed a star schema in Power BI, separating fact tables (shipping operations, port activities) from dimension tables (vessel, port, date, weekday).<br>• Created key DAX measures, including unloading/loading efficiency, average port turnaround time (PT), and gate exit rate.</li>
+                            <li data-i18n="projects.tracktrace.bullet3"><strong><u>Visualization & Analytics:</u></strong><br>• Sailing Level Report: monitored unloading/loading ratios and time consumption for individual voyages.<br>• Port Level Report: aggregated efficiency at the port level, with time-series comparisons and trend analysis.<br>• Trend Charts: visualized efficiency changes over time, supporting anomaly detection and KPI monitoring.<br>• Delivered interactive slicers (by vessel, port, date) to support flexible, ad-hoc analysis by operations teams.</li>
+                            <li data-i18n="projects.tracktrace.bullet4"><strong><u>Deployment & Optimization:</u></strong><br>• Deployed to Power BI Service with scheduled auto-refresh (twice daily).<br>• Reduced data refresh time by ~40% through SQL pre-aggregation and Power Query optimization.<br>• Built a usage monitoring report to track user adoption and continuously improve functionality.</li>
+                            <li data-i18n="projects.tracktrace.bullet5"><strong><u>Impact:</u></strong><br>• System has been running reliably for over 2 years, becoming the department's core operational tool.<br>• Significantly improved operational visibility and decision-making efficiency compared to fragmented legacy reports.<br>• Enabled effective monitoring of loading/unloading efficiency and gate processes, uncovering multiple issues that led to follow-up optimization projects.</li>
+                        </ul>
                         <div class="project-gallery">
                             <div class="gallery-container">
                                 <img src="assets/images/projects/project1/project1-1.jpg" alt="Dashboard Screenshot 1" class="gallery-thumbnail" data-project="0" data-image="0">
@@ -532,24 +539,27 @@
                 </div>
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 data-i18n="projects.thesis.title">Master Thesis – Supply Chain & Logistics</h3>
+                        <h3 data-i18n="projects.thesis.title">Master's Thesis – Economic and Environmental Impacts of Dry Ports and Triangulation Transport on the Empty Container Repositioning Problem</h3>
                         <div class="project-meta">
                             <span class="project-company">Chalmers University, Sweden</span>
                             <span class="project-date">2022.01 - 2022.08</span>
                         </div>
-                        <p data-i18n="projects.thesis.subtitle">Assessing the Economic and Environmental Effects of Dry Port and Triangulation Transport on the 
-                            Empty Container Repositioning Problem</p>
+                        <p data-i18n="projects.thesis.description">This thesis focused on the Empty Container Repositioning (ECR) problem within Sweden's inland container transport network, assessing the economic and environmental impacts of introducing dry ports and adopting triangulation transport strategies. Using the case of Gothenburg Port and Eskilstuna Dry Port, the study developed an agent-based discrete-event simulation model in AnyLogic to compare multiple scenarios with and without dry ports and different repositioning strategies.</p>
+                        <p data-i18n="projects.thesis.keycontributions">Key Contributions & Technical Details</p>
                         <ul>
-                            <li data-i18n="projects.thesis.bullet1">Conducted research on empty container repositioning (ECR) in Sweden's inland container logistics, 
-                                focusing on economic and environmental impacts of dry ports and triangulation transport.
-                            </li>
-                            <li data-i18n="projects.thesis.bullet2">Built three <strong><u>Agent-based Discrete-event Simulation Models</u></strong> using AnyLogic with real operational data: 
-                                (1) with dry port, (2) without dry port, (3) with dry port plus triangulation. Simulated container flows, 
-                                costs, and CO₂ emissions to evaluate efficiency and sustainability.
-                            </li>
-                            <li data-i18n="projects.thesis.bullet3">Results showed dry ports reduced transport costs by <strong><u>66.36%</u></strong> and emissions by <strong><u>78.86%</u></strong>; 
-                                triangulation further decreased costs by <strong><u>25.12%</u></strong> and emissions by <strong><u>7.85%</u></strong>.
-                            </li>
+                            <li data-i18n="projects.thesis.bullet1"><strong><u>Research Design & Data Collection</u></strong><br>• Conducted a systematic literature review covering container logistics, ECR strategies, and intermodal transport.<br>• Collected case data from importers/exporters and calibrated it against historical transport records.<br>• Defined key variables including container flows, transport costs, and CO₂ emission factors (train vs. truck).</li>
+                            <li data-i18n="projects.thesis.bullet2"><strong><u>Simulation Modeling</u></strong>
+                                <br>• Built four scenarios in AnyLogic:<br>&nbsp;&nbsp;&nbsp;◦ With Dry Port: Introduces a dry port as 
+                                an inland consolidation node to relieve seaport congestion and optimize ECR.<br>&nbsp;&nbsp;&nbsp;◦ Without Dry Port: 
+                                Baseline case where all containers move directly between the seaport and customers without inland terminals.
+                                <br>&nbsp;&nbsp;&nbsp;◦ With Dry Port + Triangulation: Uses triangulation strategies under the dry port model, assigning import 
+                                containers directly to export shipments to reduce empty repositioning.<br>&nbsp;&nbsp;&nbsp;◦ With Dry Port + Street-turn: Applies 
+                                a street-turn strategy under the dry port model, where import containers are reused immediately by exporters, 
+                                minimizing storage and repositioning needs.<br>• Combined Agent-Based Modeling (ABM) for network actors 
+                                (shipping lines, ports, customers) with Discrete-Event Simulation (DES) for facility-level operations.
+                                <br>• Incorporated stochastic parameters (e.g., demand fluctuations, transport time variability) to improve realism.</li>
+                            <li data-i18n="projects.thesis.bullet3"><strong><u>Analysis & Results</u></strong><br>• Introducing a dry port reduced inland transport costs by ~62–66% and CO₂ emissions by ~71–79%.<br>• Adding triangulation strategies provided further reductions (~25–27% in costs, ~7–10% in emissions) and significantly decreased the share of empty container movements.<br>• The street-turn strategy also produced benefits but was less effective than triangulation.</li>
+                            <li data-i18n="projects.thesis.bullet4"><strong><u>Impact</u></strong><br>• Demonstrated the strategic value of dry ports in lowering inland transport costs and emissions.<br>• Provided quantitative insights for sustainable intermodal transport planning in Sweden.<br>• Advanced simulation methodology by combining ABM and DES with stochastic variables, improving both realism and applicability in logistics research.</li>
                         </ul>
                         <div class="project-gallery">
                             <div class="gallery-container">
