@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add event listeners to language buttons
     const langButtons = document.querySelectorAll('.lang-btn');
+    console.log('Found language buttons on page load:', langButtons.length);
     langButtons.forEach(button => {
         button.addEventListener('click', function() {
             const lang = this.getAttribute('data-lang');
+            console.log('Language button clicked:', lang);
             setLanguage(lang);
         });
     });
@@ -19,11 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to set language
 function setLanguage(lang) {
+    console.log('Setting language to:', lang);
     currentLanguage = lang;
     localStorage.setItem('portfolioLanguage', lang);
     
     // Update active button state
     const langButtons = document.querySelectorAll('.lang-btn');
+    console.log('Found language buttons:', langButtons.length);
     langButtons.forEach(button => {
         button.classList.remove('active');
         if (button.getAttribute('data-lang') === lang) {
@@ -38,6 +42,7 @@ function setLanguage(lang) {
 // Function to update page content based on selected language
 function updatePageLanguage() {
     const elements = document.querySelectorAll('[data-i18n]');
+    console.log('Found translatable elements:', elements.length);
     elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
         const translation = getTranslation(key);
@@ -47,6 +52,8 @@ function updatePageLanguage() {
             } else {
                 element.innerHTML = translation;
             }
+        } else {
+            console.log('No translation found for key:', key);
         }
     });
 }
@@ -607,6 +614,12 @@ const projectImages = [
         'assets/images/projects/project2/Project 2.9.jpg',
         'assets/images/projects/project2/Project 2.10.jpg',
         'assets/images/projects/project2/Project 2.11.jpg'
+    ],
+    // Project 3: Estimated RPT
+    [
+        'assets/images/projects/Project4/1.png',
+        'assets/images/projects/Project4/2.jpg',
+        'assets/images/projects/Project4/3.jpg'
     ]
 ];
 

@@ -409,14 +409,14 @@
                             <span class="project-company">Stena Line, Sweden</span>
                             <span class="project-date">2024.09 - 2024.12</span>
                         </div>
-                        <p data-i18n="projects.estimatedrpt.description">Led the optimization of Estimated Ready for Pick-up Time (Estimated RPT) prediction accuracy through systematic problem decomposition and innovative solution implementation. The project focused on improving both ETA (Estimated Time of Arrival) and unloading duration predictions to enhance terminal operations and customer satisfaction.</p>
+                        <p data-i18n="projects.estimatedrpt.description">By this project, the accuracy of the estimated RPT was increased from 10% to 90%.</p>
                         <ul>
                             <li data-i18n="projects.estimatedrpt.bullet1"><strong><u>1. Problem Breakdown</u></strong><br>Estimated RPT = ETA + Unloading Duration. Improving accuracy requires optimizing both parts.<br>• ETA: Highly uncertain, influenced by route, weather, and vessel speed, often with deviations of several hours.<br>• Unloading Duration: Large vessels take 6–10 hours to unload, creating significant gaps between the first and last Real RPT.</li>
                             <li data-i18n="projects.estimatedrpt.bullet2"><strong><u>2. ETA Optimization</u></strong><br>• Use Stena Line's offshore real-time ETA system via API integration.<br>• Refresh ETA at key stages: departure, hourly during voyage, and upon arrival.</li>
                                 <li data-i18n="projects.estimatedrpt.bullet3"><strong><u>3. Unloading Duration Optimization</u></strong><br><strong>
                                 3.1 Deck and Subsection</strong><br>• Current deck-level grouping is too coarse; unloading times vary within a deck.
                                 <br>• Further divide decks into ~6 subsections (front/middle/rear × left/right).<br>• Smaller variance within 
-                                subsections improves Estimated RPT accuracy.<br>• While zone-level averages provide a baseline, unloading times need also be adjusted for the vessel's time of arrival, which significantly impacts the unloading time.<br><br><strong>3.2 Subsection Trade-off</strong><br>• Too large → 
+                                subsections improves Estimated RPT accuracy.<br>• While zone-level averages provide a baseline, unloading times need also be adjusted for the vessel's time of arrival, which significantly impacts the unloading time.<br><strong>3.2 Subsection Trade-off</strong><br>• Too large → 
                                 high variance, low accuracy.<br>• Too small → sparse data, risk of overfitting, higher operational complexity.<br>
                                 • Optimal size determined through analysis and simulation.</li>
                             <li data-i18n="projects.estimatedrpt.bullet4"><strong><u>4. Accuracy vs. Effectiveness</u></strong><br>Estimated RPT is an interval, Real RPT a time point. Accuracy means the Real RPT falls within the interval. Expanding the interval improves accuracy but reduces prediction effectiveness. Different ports adopt tailored accuracy targets and interval widths.</li>
@@ -503,8 +503,7 @@
                             <span class="project-company">Stena Line, Sweden</span>
                             <span class="project-date">2023.03 - 2023.10</span>
                         </div>
-                        <p data-i18n="projects.tracktrace.description">At the request of management, I designed and developed a Power BI Operations Monitoring System to provide multi-dimensional analysis of port efficiency (daily, weekly, monthly, as well as vessel-level and port-level granularities). This was the department's first centralized performance monitoring tool, enabling data-driven and real-time operational management. The dashboard later served as the foundation for multiple spin-off projects that further improved port efficiency.</p>
-                        <p data-i18n="projects.tracktrace.keycontributions">Key Contributions and Technical Details:</p>
+                        <p data-i18n="projects.tracktrace.description">At the request of management, I designed and developed a Power BI Operations Monitoring System to provide multi-dimensional analysis of port efficiency (daily, weekly, monthly, as well as vessel-level and port-level granularities). The dashboard later served as the foundation for multiple spin-off projects that further improved port efficiency.</p>
                         <ul>
                             <li data-i18n="projects.tracktrace.bullet1"><strong><u>Data Integration & Extraction:</u></strong><br>• Wrote complex SQL queries to extract vessel arrival/departure, loading/unloading, gate operations, and trailer movement data.<br>• Built automated ETL pipelines using Python scripts and Power Query for bulk data ingestion, cleaning, and transformation. Tasks included filling missing timestamps, validating voyage IN/OUT sequences, deduplication, and outlier handling.<br>• Applied Python for advanced ETL logic, such as irregular timestamp conversion and batch correction of abnormal voyages.</li>
                             <li data-i18n="projects.tracktrace.bullet2"><strong><u>Data Modeling:</u></strong><br>• Designed a star schema in Power BI, separating fact tables (shipping operations, port activities) from dimension tables (vessel, port, date, weekday).<br>• Created key DAX measures, including unloading/loading efficiency, average port turnaround time (PT), and gate exit rate.</li>
@@ -517,6 +516,7 @@
                                 <img src="assets/images/projects/project1/project1-1.jpg" alt="Dashboard Screenshot 1" class="gallery-thumbnail" data-project="0" data-image="0">
                                 <img src="assets/images/projects/project1/project1-2.jpg" alt="Dashboard Screenshot 2" class="gallery-thumbnail" data-project="0" data-image="1">
                                 <img src="assets/images/projects/project1/project1-3.jpg" alt="Dashboard Screenshot 3" class="gallery-thumbnail" data-project="0" data-image="2">
+                                <img src="assets/images/projects/project1/project1-4.jpg" alt="Dashboard Screenshot 4" class="gallery-thumbnail" data-project="0" data-image="3">
                                 <img src="assets/images/projects/project1/project1-5.jpg" alt="Dashboard Screenshot 5" class="gallery-thumbnail" data-project="0" data-image="4">
                             </div>
                             <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
