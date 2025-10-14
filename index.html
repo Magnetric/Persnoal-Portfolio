@@ -404,6 +404,31 @@
                 <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-content">
+                        <h3 data-i18n="projects.pricingsystem.title">Evaluate the impact of a Pricing System on the Revenue using Two-Way Fixed Effects DID model</h3>
+                        <div class="project-meta">
+                            <span class="project-company">Company Analysis Project</span>
+                            <span class="project-date">2020.01 - 2020.12</span>
+                        </div>
+                        <ul>
+                            <li data-i18n="projects.pricingsystem.bullet1"><strong><u>Project Background & Objective</u></strong><br>In 2020, the company launched an EMSR-based automatic pricing system to help Regional Managers set ticket prices. However, the feature was not mandatory, which led to very different adoption rates across routes—some routes barely used it (usage ≈ 0%), while others adopted it consistently at a high level (usage ≈ 100%).<br>Management wanted to assess whether this system actually increased passenger revenue. We selected 15 routes for analysis. However, COVID-19 also broke out in 2020—at the exact same time the pricing system was introduced—causing dramatic industry-wide revenue fluctuations. This made it impossible to simply compare "pre-2020 vs. post-2020" or predict post-pandemic revenue based on historical trends.</li>
+                            <li data-i18n="projects.pricingsystem.bullet2"><strong><u>Methodology / Solution</u></strong><br>We applied a Two-Way Fixed Effects Difference-in-Differences (DID) model:<br><strong>ln(Revenue<sub>it</sub> + 1) = β ⋅ (UsageRate<sub>it</sub> × Post<sub>t</sub>) + γ<sub>i</sub> + δ<sub>t</sub> + ε<sub>it</sub></strong><br>Where:<br>• γ<sub>i</sub> (Route Fixed Effects) — controls for time-invariant route-specific characteristics<br>• δ<sub>t</sub> (Time Fixed Effects) — controls for shocks affecting all routes at the same time<br>• UsageRate × Post — the key interaction term capturing post-COVID treatment intensity</li>
+                            <li data-i18n="projects.pricingsystem.bullet3"><strong><u>Reasons:</u></strong><br>• The adoption of the pricing system is continuous (0%–100%) rather than binary (0/1).<br>• Without route fixed effects, a traditional specification (β * usage_rate) would incorrectly attribute baseline revenue differences between routes to the pricing system. γ<sub>i</sub> removes these inherent cross-route differences that are unrelated to usage.<br>• COVID-19 and the subsequent recovery significantly impacted passenger revenue over time. Time fixed effects δ<sub>t</sub> eliminate industry-wide fluctuations and prevent falsely attributing common shocks to the pricing system.<br>• Revenue levels differ greatly across routes, and using raw values can let outliers dominate the regression. Taking the natural logarithm stabilizes variance and allows the coefficient to be interpreted as a percentage effect rather than an absolute change.</li>
+                            <li data-i18n="projects.pricingsystem.bullet4"><strong><u>Implementation Steps</u></strong><br><strong>1. Data Setup</strong><br>• Routes: 15<br>• Time Range: 2015–2025 (monthly)<br>• Variables: Revenue, usage rate, time dummy (post)<br><strong>2. Variable Construction</strong><br>• post = 1 if year ≥ 2020, else 0<br>• ur_post = usage_rate × post<br>• Apply natural log transformation to revenue: ln(Revenue + 1)<br><strong>3. Model Estimation</strong><br>• Use statsmodels OLS with cluster-robust standard errors</li>
+                            <li data-i18n="projects.pricingsystem.bullet5"><strong><u>Results</u></strong><br>The interaction term β is estimated at 0.08, meaning that a route with full adoption of the pricing system would see approximately an 8% increase in passenger revenue. However, the p-value is 0.12, indicating the result is positive in direction but only marginally significant, rather than statistically significant at conventional thresholds.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Econometrics</span>
+                            <span>Statistical Analysis</span>
+                            <span>Difference-in-Differences</span>
+                            <span>Fixed Effects Models</span>
+                            <span>Regression Analysis</span>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
                         <h3 data-i18n="projects.estimatedrpt.title">Estimated Ready for Pick-up Time (Estimated RPT) Optimization</h3>
                         <div class="project-meta">
                             <span class="project-company">Stena Line, Sweden</span>
@@ -518,6 +543,7 @@
                                 <img src="assets/images/projects/project1/project1-3.jpg" alt="Dashboard Screenshot 3" class="gallery-thumbnail" data-project="0" data-image="2">
                                 <img src="assets/images/projects/project1/project1-4.jpg" alt="Dashboard Screenshot 4" class="gallery-thumbnail" data-project="0" data-image="3">
                                 <img src="assets/images/projects/project1/project1-5.jpg" alt="Dashboard Screenshot 5" class="gallery-thumbnail" data-project="0" data-image="4">
+                                <img src="assets/images/projects/project1/project1-6.jpg" alt="Dashboard Screenshot 6" class="gallery-thumbnail" data-project="0" data-image="5">
                             </div>
                             <button class="gallery-nav gallery-prev" onclick="scrollGallery(this, 'prev')">
                                 <i class="fas fa-chevron-left"></i>
