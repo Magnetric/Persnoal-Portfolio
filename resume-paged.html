@@ -553,7 +553,7 @@
                         <h3 class="job-title">Data Scientist</h3>
                         <p class="company">Stena Line</p>
                     </div>
-                    <span class="date">Aug 2022 - Jul 2025</span>
+                    <span class="date">Aug 2022 - Sep 2025</span>
                 </div>
                 <p class="job-description">
                     Focus on <strong>end-to-end business data analysis</strong> — from data extraction and processing to visualization and reporting — to optimize operational processes and enhance decision-making.
@@ -561,7 +561,7 @@
                 <ul class="job-achievements">
                     <li>Improved estimated ready-for-pickup times using historical data analysis and real-time ETA integration</li>
                     <li>Developed <strong>Power BI dashboards</strong> for port operations monitoring, in <strong>continuous use for over two years</strong></li>
-                    <li>Applied <strong>Causal Impact Analysis</strong> to evaluate pricing model benefits</li>
+                    <li>Applied <strong>Causal Inference Analysis (specifically, Two-Way Fixed Effects DiD model)</strong> to evaluate pricing model benefits</li>
                 </ul>
             </div>
 
@@ -642,6 +642,25 @@
             <div class="project-item avoid-break">
                 <div class="project-header">
                     <div>
+                        <h3 class="project-title">Pricing System Impact Evaluation using Two-Way Fixed Effects DID Model</h3>
+                        <p class="project-company">Company Analysis Project</p>
+                    </div>
+                    <span class="date">Jan 2020 - Dec 2020</span>
+                </div>
+                <p class="project-description">
+                    Evaluated the impact of an EMSR-based automatic pricing system on passenger revenue using advanced econometric methods. The analysis addressed the challenge of isolating the pricing system's effect from concurrent COVID-19 impacts through a Two-Way Fixed Effects Difference-in-Differences model.
+                </p>
+                <ul class="job-achievements">
+                    <li>Applied Two-Way Fixed Effects DID model: ln(Revenue<sub>it</sub> + 1) = β ⋅ (UsageRate<sub>it</sub> × Post<sub>t</sub>) + γ<sub>i</sub> + δ<sub>t</sub> + ε<sub>it</sub></li>
+                    <li>Controlled for route-specific characteristics and time-varying shocks to isolate pricing system effects</li>
+                    <li>Estimated 8% revenue increase for full adoption, with marginal statistical significance (p-value = 0.12)</li>
+                    <li>Analyzed 15 routes over 2015-2025 monthly data using statsmodels OLS with cluster-robust standard errors</li>
+                </ul>
+            </div>
+
+            <div class="project-item avoid-break">
+                <div class="project-header">
+                    <div>
                         <h3 class="project-title">Estimated RPT Optimization</h3>
                         <p class="project-company">Stena Line, Sweden</p>
                     </div>
@@ -653,23 +672,6 @@
                 <ul class="job-achievements">
                     <li>Integrated real-time ETA system via API and optimized deck-level grouping into subsections for improved accuracy</li>
                     <li>Developed zone-based unloading models balancing prediction precision with terminal efficiency</li>
-                </ul>
-            </div>
-
-            <div class="project-item avoid-break">
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">Full-Stack Photography Portfolio Website</h3>
-                        <p class="project-company">Personal Project — <a href="https://www.haoexplore.com" target="_blank">www.haoexplore.com</a></p>
-                    </div>
-                    <span class="date">Jul 2025 - Aug 2025</span>
-                </div>
-                <p class="project-description">
-                    Built an interactive, cloud-powered photography platform showcasing full-stack development skills with responsive design and AWS serverless architecture.
-                </p>
-                <ul class="job-achievements">
-                    <li>Frontend: HTML5/CSS3/JavaScript with interactive galleries, 360° panoramic views, rating system, and map integration</li>
-                    <li>Backend: AWS serverless architecture with API Gateway, Lambda (Python), S3, and DynamoDB for scalable photo management</li>
                 </ul>
             </div>
 

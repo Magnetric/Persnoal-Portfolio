@@ -527,7 +527,7 @@
                         <h3 class="job-title">数据科学家</h3>
                         <p class="company">Stena Line</p>
                     </div>
-                    <span class="date">2022年8月 - 2025年7月</span>
+                    <span class="date">2022年8月 - 2025年9月</span>
                 </div>
                 <p class="job-description">
                     专注于<strong>端到端业务数据分析</strong>——从数据提取和处理到可视化和报告——以优化运营流程并增强决策制定。
@@ -535,7 +535,7 @@
                 <ul class="job-achievements">
                     <li>通过历史数据分析和实时ETA集成，改进了货运的预计取货时间</li>
                     <li>开发了<strong>Power BI仪表板</strong>用于港口和码头运营监控，已<strong>连续使用超过两年</strong></li>
-                    <li>应用<strong>因果影响分析</strong>评估定价模型的效益</li>
+                    <li>应用<strong>因果推断分析（具体来说，双向固定效应DiD模型）</strong>评估定价模型的效益</li>
                 </ul>
             </div>
 
@@ -613,6 +613,25 @@
         <div class="section">
             <h2 class="section-title">重点项目</h2>
             
+            <div class="project-item avoid-break">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">使用双向固定效应DID模型评估定价系统对营收的影响</h3>
+                        <p class="project-company">公司分析项目</p>
+                    </div>
+                    <span class="date">2020年1月 - 2020年12月</span>
+                </div>
+                <p class="project-description">
+                    使用先进的计量经济学方法评估了基于EMSR的自动定价系统对客运营收的影响。分析通过双向固定效应差分法解决了将定价系统效果与并发COVID-19影响分离的挑战。
+                </p>
+                <ul class="job-achievements">
+                    <li>应用双向固定效应DID模型：ln(Revenue<sub>it</sub> + 1) = β ⋅ (UsageRate<sub>it</sub> × Post<sub>t</sub>) + γ<sub>i</sub> + δ<sub>t</sub> + ε<sub>it</sub></li>
+                    <li>控制航线特定特征和时间变化冲击，以隔离定价系统效果</li>
+                    <li>估计完全采用将带来8%的收入增长，具有边际统计显著性（p值=0.12）</li>
+                    <li>使用statsmodels OLS和聚类稳健标准误分析15条航线2015-2025年月度数据</li>
+                </ul>
+            </div>
+
             <div class="project-item avoid-break">
                 <div class="project-header">
                     <div>
