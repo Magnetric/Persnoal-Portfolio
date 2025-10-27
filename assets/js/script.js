@@ -593,7 +593,8 @@ const projectImages = [
         'assets/images/projects/project1/project1-2.jpg',
         'assets/images/projects/project1/project1-3.jpg',
         'assets/images/projects/project1/project1-4.jpg',
-        'assets/images/projects/project1/project1-5.jpg'
+        'assets/images/projects/project1/project1-5.jpg',
+        'assets/images/projects/project1/project1-6.jpg'
     ],
     // Project 1: Thesis
     [
