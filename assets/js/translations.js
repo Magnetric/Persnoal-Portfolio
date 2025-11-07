@@ -59,10 +59,10 @@ const translations = {
             chalmers: {
                 title: "Research Assistant (Data Analyst)",
                 company: "Chalmers University of Technology",
-                description: "Primarily focused on analyzing changes in delivery patterns and customer behavior during COVID-19, providing actionable insights for logistics and retail. Worked on end-to-end research projects — from data collection and modeling to visualization and reporting.",
-                bullet1: "Investigated changes in delivery patterns and customer behavior during COVID-19.",
-                bullet2: "Conducted data collection, modeling, analysis, and visualization (in Python and Tableau).",
-                bullet3: "Confirmed post-pandemic shifts in spending and online shopping trends."
+                description: "Customer Behavior & Delivery Demand Analysis Project — Västra Götaland, Sweden. Analyzed how COVID-19 and socio-demographic factors shaped online shopping behavior, integrating multi-source datasets to uncover demand drivers and support forecasting.",
+                bullet1: "Built a unified dataset by merging delivery records, population statistics, and weekly COVID-19 reports through data cleaning, feature engineering, and spatial–temporal alignment.",
+                bullet2: "Conducted descriptive analysis and multiple regression modeling to quantify key demand drivers, revealing a strong correlation between weekly new cases and order volume (r > 0.70), and significant influence from the 25–44 age group and higher-education segments.",
+                bullet3: "The result shows that the amount of orders has grown by over 40% after Covid-19, led by fashion and electronics categories."
             },
             midea: {
                 title: "Supply Chain Planner (Intern)",
@@ -219,10 +219,10 @@ const translations = {
             chalmers: {
                 title: "研究助理（数据分析师）",
                 company: "查尔姆斯理工大学",
-                description: "主要专注于分析COVID-19期间配送模式和客户行为的变化，为物流和零售提供可操作的见解。从事端到端研究项目——从数据收集和建模到可视化和报告。",
-                bullet1: "调查了COVID-19期间配送模式和客户行为的变化。",
-                bullet2: "进行数据收集、建模、分析和可视化（使用Python和Tableau）。",
-                bullet3: "确认了疫情后支出和在线购物趋势的转变。"
+                description: "客户行为与配送需求分析项目——瑞典西约塔兰省。分析了COVID-19和社会人口因素如何影响在线购物行为，整合多源数据集以揭示需求驱动因素并支持预测。",
+                bullet1: "通过数据清洗、特征工程和时空对齐，合并配送记录、人口统计数据和每周COVID-19报告，构建了统一数据集。",
+                bullet2: "进行描述性分析和多元回归建模，量化关键需求驱动因素，揭示每周新增病例与订单量之间存在强相关性（r > 0.70），25-44岁年龄组和高等教育人群产生显著影响。",
+                bullet3: "结果显示，COVID-19后订单量增长了40%以上，主要由时尚和电子产品类别带动。"
             },
             midea: {
                 title: "供应链规划师（实习生）",
@@ -379,10 +379,10 @@ const translations = {
             chalmers: {
                 title: "Forskningsassistent (Dataanalytiker)",
                 company: "Chalmers tekniska högskola",
-                description: "Fokuserade främst på att analysera förändringar i leveransmönster och kundbeteende under COVID-19, och gav handlingsbara insikter för logistik och detaljhandel. Arbetade med end-to-end forskningsprojekt — från datainsamling och modellering till visualisering och rapportering.",
-                bullet1: "Undersökte förändringar i leveransmönster och kundbeteende under COVID-19.",
-                bullet2: "Genomförde datainsamling, modellering, analys och visualisering (i Python och Tableau).",
-                bullet3: "Bekräftade post-pandemiska förändringar i utgiftsmönster och online-shopping trender."
+                description: "Kundbeteende & Leveransbehovsanalys Projekt — Västra Götaland, Sverige. Analyserade hur COVID-19 och socio-demografiska faktorer formade online-shopping beteende, integrerade flerkällsdata för att upptäcka efterfrågedrivare och stödja prognoser.",
+                bullet1: "Byggde en enhetlig datamängd genom att sammanfoga leveransregister, befolkningsstatistik och veckovisa COVID-19-rapporter genom datarengöring, funktionsteknik och rumslig-temporell justering.",
+                bullet2: "Genomförde beskrivande analys och multipel regressionsmodellering för att kvantifiera nyckelefterfrågedrivare, avslöjade en stark korrelation mellan veckovisa nya fall och ordervolym (r > 0.70), och betydande påverkan från 25–44 årsgruppen och högre utbildningssegment.",
+                bullet3: "Resultatet visar att antalet beställningar har ökat med över 40% efter Covid-19, lett av mode- och elektronikkategorier."
             },
             midea: {
                 title: "Supply Chain Planner (Praktikant)",
@@ -539,10 +539,10 @@ const translations = {
             chalmers: {
                 title: "Forschungsassistent (Datenanalytiker)",
                 company: "Chalmers University of Technology",
-                description: "Fokussierte hauptsächlich auf die Analyse von Veränderungen in Liefermustern und Kundenverhalten während COVID-19 und lieferte umsetzbare Erkenntnisse für Logistik und Einzelhandel. Arbeitete an End-to-End-Forschungsprojekten — von Datensammlung und -modellierung bis hin zu Visualisierung und Berichterstattung.",
-                bullet1: "Untersuchte Veränderungen in Liefermustern und Kundenverhalten während COVID-19.",
-                bullet2: "Führte Datensammlung, Modellierung, Analyse und Visualisierung durch (in Python und Tableau).",
-                bullet3: "Bestätigte post-pandemische Verschiebungen in Ausgabemustern und Online-Shopping-Trends."
+                description: "Kundenverhalten & Lieferbedarfsanalyse Projekt — Västra Götaland, Schweden. Analysierte, wie COVID-19 und soziodemografische Faktoren das Online-Shopping-Verhalten prägten, integrierte Multi-Source-Datensätze, um Nachfragefaktoren zu identifizieren und Prognosen zu unterstützen.",
+                bullet1: "Erstellte einen einheitlichen Datensatz durch Zusammenführung von Lieferdatensätzen, Bevölkerungsstatistiken und wöchentlichen COVID-19-Berichten durch Datenbereinigung, Feature-Engineering und räumlich-zeitliche Ausrichtung.",
+                bullet2: "Durchführte deskriptive Analyse und multiple Regressionsmodellierung zur Quantifizierung wichtiger Nachfragefaktoren, zeigte eine starke Korrelation zwischen wöchentlichen Neuinfektionen und Bestellvolumen (r > 0.70) sowie signifikanten Einfluss der Altersgruppe 25–44 Jahre und höhere Bildungsschichten.",
+                bullet3: "Das Ergebnis zeigt, dass die Anzahl der Bestellungen nach COVID-19 um über 40% gestiegen ist, angeführt von Mode- und Elektronikkategorien."
             },
             midea: {
                 title: "Supply Chain Planner (Praktikant)",
@@ -698,10 +698,10 @@ const translations = {
             chalmers: {
                 title: "Onderzoeksassistent (Data-analist)",
                 company: "Chalmers University of Technology",
-                description: "Focuste voornamelijk op het analyseren van veranderingen in leveringspatronen en klantgedrag tijdens COVID-19, en gaf actiegerichte inzichten voor logistiek en retail. Werkte aan end-to-end onderzoeksprojecten — van dataverzameling en modellering tot visualisatie en rapportage.",
-                bullet1: "Onderzocht veranderingen in leveringspatronen en klantgedrag tijdens COVID-19.",
-                bullet2: "Voerde dataverzameling, modellering, analyse en visualisatie uit (in Python en Tableau).",
-                bullet3: "Bevestigde post-pandemische verschuivingen in uitgavenpatronen en online-shopping trends."
+                description: "Klantgedrag & Leveringsvraag Analyse Project — Västra Götaland, Zweden. Analyseerde hoe COVID-19 en sociaal-demografische factoren online-shopping gedrag vormden, integreerde multi-source datasets om vraagfactoren te onthullen en prognoses te ondersteunen.",
+                bullet1: "Bouwde een uniforme dataset door leveringsrecords, bevolkingsstatistieken en wekelijkse COVID-19-rapporten samen te voegen via datareiniging, feature engineering en ruimtelijk-temporele uitlijning.",
+                bullet2: "Voerde beschrijvende analyse en meervoudige regressiemodellering uit om belangrijke vraagfactoren te kwantificeren, onthulde een sterke correlatie tussen wekelijkse nieuwe gevallen en ordervolume (r > 0.70), en significante invloed van de 25–44 leeftijdsgroep en hoger-onderwijs segmenten.",
+                bullet3: "Het resultaat toont aan dat het aantal bestellingen met meer dan 40% is gegroeid na Covid-19, geleid door mode- en elektronica categorieën."
             },
             midea: {
                 title: "Supply Chain Planner (Stagiair)",
